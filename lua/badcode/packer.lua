@@ -2,7 +2,6 @@ vim.cmd.packadd('packer.nvim')
 return require('packer').startup(function(use)
   -- plugin manager
   use 'wbthomason/packer.nvim'
-
   -- fuzzy finder
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -48,6 +47,7 @@ return require('packer').startup(function(use)
 
   use("folke/zen-mode.nvim")
 
+  --file browser
   use {
   'nvim-tree/nvim-tree.lua',
   requires = {
@@ -55,5 +55,11 @@ return require('packer').startup(function(use)
   },
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
 }
+--airline
+use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
+
 end)
 
