@@ -1,3 +1,4 @@
+-- supported themes: https://github.com/rockerBOO/awesome-neovim#tree-sitter-supported-colorscheme
 -- setup must be called before loading the colorscheme
 -- Default options:
 require("gruvbox").setup({
