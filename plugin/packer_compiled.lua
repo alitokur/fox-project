@@ -194,6 +194,11 @@ _G.packer_plugins = {
     path = "/home/gumball/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-gitgutter"] = {
+    loaded = true,
+    path = "/home/gumball/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
+    url = "https://github.com/airblade/vim-gitgutter"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/home/gumball/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",

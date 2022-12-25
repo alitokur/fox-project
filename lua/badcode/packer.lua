@@ -61,5 +61,7 @@ use {
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
 
+use ("airblade/vim-gitgutter")
+
 end)
 
