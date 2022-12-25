@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/gumball/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["heirline.nvim"] = {
+    loaded = true,
+    path = "/home/gumball/.local/share/nvim/site/pack/packer/start/heirline.nvim",
+    url = "https://github.com/rebelot/heirline.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/gumball/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",

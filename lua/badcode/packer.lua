@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
 
   use ( 'tpope/vim-fugitive' )
 
+  use "rebelot/heirline.nvim"
   --auto complete
   use {
 	  'VonHeikemen/lsp-zero.nvim',
