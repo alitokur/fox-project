@@ -1,21 +1,37 @@
 ### badcode's init.lua
-Inspired by our ancient leader ThePrimeagen, you can find the original configs from here https://github.com/ThePrimeagen/init.lua
+Inspired by our ancient leader ThePrimeagen, you can find the original configs [here](https://github.com/ThePrimeagen/init.lua) 
 
 ### Setup
-rm -rf nvim
-rm -rf ~/.local/share/nvim
-rm -rf ~/.local/state/nvim
+You need nvim 0.9, if you do not have nvim0.9 or > you can run these commands
+
+    sudo add-apt-repository ppa:neovim-ppa/unstable
+    sudo apt-get update
+    sudo apt-get install neovim
+
+If nvim its already installed, remove previous configs, or john will come for you.
+
+    rm -rf nvim
+    rm -rf ~/.local/share/nvim
+    rm -rf ~/.local/state/nvim
+
+And here we are
+```sh
+cd .config
 mkdir nvim
 git clone https://github.com/alitokur/neocpp.git .
+```
+## Requirements
+### Packer
+Lovely plugin manager
 
-### Install Packer
+```sh
+ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
 
-sudo apt-get install ripgrep
+### Ripgrep
+To use grep function
 
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-
+    sudo apt-get install ripgrep
 
 ### Change Log
-
