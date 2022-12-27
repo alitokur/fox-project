@@ -10,7 +10,9 @@ return require('packer').startup(function(use)
   }
 
   -- theme
-  use { "ellisonleao/gruvbox.nvim" }
+  --use { "ellisonleao/gruvbox.nvim" }
+-- Install without configuration
+  use ({ 'projekt0n/github-nvim-theme' })
 
   -- parser
   use ({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
@@ -22,8 +24,12 @@ return require('packer').startup(function(use)
 
   use ( 'tpope/vim-fugitive' )
 
-  use "rebelot/heirline.nvim"
+  use ('rebelot/heirline.nvim')
   --auto complete
+
+  --indent blankline
+  use ('lukas-reineke/indent-blankline.nvim')
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  requires = {
