@@ -8,11 +8,18 @@ add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install neovim
 
+!!need for some Mason
+apt install python3.8-venv
+
+
 If nvim its already installed, remove previous configs, or john will come for you.
 
 rm -rf nvim
 rm -rf ~/.local/share/nvim
 rm -rf ~/.local/state/nvim
+
+
+apt install python3.8-venv
 
 And here we are
 ```sh
