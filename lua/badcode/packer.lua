@@ -10,9 +10,14 @@ return require('packer').startup(function(use)
   }
 
   -- theme
+  -- gruvbox
   --use { "ellisonleao/gruvbox.nvim" }
--- Install without configuration
-  use ({ 'projekt0n/github-nvim-theme' })
+
+  -- github themes
+  -- use ({ 'projekt0n/github-nvim-theme' })
+
+  -- onedark
+  use 'navarasu/onedark.nvim'
 
   -- parser
   use ({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
