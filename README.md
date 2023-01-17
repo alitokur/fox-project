@@ -1,13 +1,20 @@
-# Neovim C++ Configuration
+<div align="center">
 
+# neocpp
 
 <img src="https://img.shields.io/github/last-commit/alitokur/neocpp?color=yellow&display_timestamp=committer" alt="LastCommit"> <img src="https://img.shields.io/github/contributors/alitokur/neocpp?color=red" alt="Contributors">
 
+`Neocpp` is a config file for cpp developers. 
+
+Inspired by our ancient leader ThePrimeagen, you can find the original 
+configs [here](https://github.com/ThePrimeagen/init.lua).
+
+</div>
 
 
 <img src="img/Animation.gif" alt="NeocppGIFDemo">                                                                                             
                                                                                            
-`Neocpp` is a config file for cpp developers. Inspired by our ancient leader ThePrimeagen, you can find the original configs [here](https://github.com/ThePrimeagen/init.lua).
+
 
 Neocpp provides the followign plugins:
 - Themes
