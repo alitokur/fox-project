@@ -1,14 +1,13 @@
-<p align="center">
- 
-  <a href="https://discord.gg/nC2nHPWg">
-    <img src="https://img.shields.io/discord/1064983558478909563" alt="Discord">
-  </a>
- <img src="https://img.shields.io/github/last-commit/alitokur/neocpp?color=yellow&display_timestamp=committer" alt=LastCommit">
- <img src="https://img.shields.io/github/contributors/alitokur/neocpp?color=red" alt="Contributors">
+# Neovim C++ Configuration
 
-</p>
 
-Neocpp is a config file for cpp developers. Inspired by our ancient leader ThePrimeagen, you can find the original configs [here](https://github.com/ThePrimeagen/init.lua).
+<img src="https://img.shields.io/github/last-commit/alitokur/neocpp?color=yellow&display_timestamp=committer" alt="LastCommit"> <img src="https://img.shields.io/github/contributors/alitokur/neocpp?color=red" alt="Contributors">
+
+
+
+<img src="img/Animation.gif" alt="NeocppGIFDemo">                                                                                             
+                                                                                           
+`Neocpp` is a config file for cpp developers. Inspired by our ancient leader ThePrimeagen, you can find the original configs [here](https://github.com/ThePrimeagen/init.lua).
 
 Neocpp provides the followign plugins:
 - Themes
