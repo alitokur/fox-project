@@ -4,9 +4,9 @@
 
 <img src="https://img.shields.io/github/last-commit/alitokur/neocpp?color=yellow&display_timestamp=committer" alt="LastCommit"> <img src="https://img.shields.io/badge/nvim-v0.9-blueviolet" alt="Neovim"> <img src="https://img.shields.io/github/contributors/alitokur/neocpp?color=red" alt="Contributors">
 
-`Neocpp` is a config file for c++ developers. 
+`Neocpp` is a config file for c++ developers. It uses Lua API to be able to build the configuration.
 
-Inspired by our ancient leader [ThePrimeagen](https://github.com/ThePrimeagen), you can find the original 
+ Inspired by our ancient leader [ThePrimeagen](https://github.com/ThePrimeagen), you can find the original 
 configs [here](https://github.com/ThePrimeagen/init.lua).
 
 <img src="img/Animation.gif" alt="NeocppGIFDemo">    
