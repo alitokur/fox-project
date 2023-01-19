@@ -24,7 +24,13 @@ Contents
  
  
 ### Why
-You need nvim 0.9
+
+Why not? I know, there is a number of options ( if you use vscode may god have mercy on your soul) but i think using vim is a skill, is not just about code fast, it's about that powerful feeling you get when using it, controlling huge or tiny code bases within your terminal with not a second of stuttering anywhere... So that is why I decided to learn a time ago. It also allows me to customize everything and I can build something exactly the way I want it. The next question is, Why Neovim?
+
+- Community Supported Codebase (i know its buggy but it means new features always)
+- Lua Support
+- Core sides are still single threads like Vim but support asynchronous plugins
+- Treesitter - Builtin LSP
 
 ### Installation
 Ubuntu:
