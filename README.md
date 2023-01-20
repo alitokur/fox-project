@@ -16,12 +16,10 @@ configs [here](https://github.com/ThePrimeagen/init.lua).
 Contents
 ========
  * [Why?](#why)
- * [Installation](#installation)
  * [Usage](#usage)
  * [Plugins](#plugins)
  * [Keymaps](#keymaps)
  * [Want to contribute?](#want-to-contribute)
- 
  
 ### Why
 
@@ -74,7 +72,13 @@ Run following command and you will see millions of errors. But don't worry.
 nvim lua/badcode/packer.lua
 ```
 
-![Screenshot from 2023-01-20 12-55-52](https://user-images.githubusercontent.com/20575896/213803715-828181f8-cff2-47ea-9711-066a9affde80.png)
+<img src="img/usage.gif" alt="UsageGIF">    
+
+1-) Just skip these error lines with space or enter, 
+
+2-) then write `:so` and `:PackerSync` command. 
+
+3-) Some plugins will not install in the first time. Do it step 2 one more time.
 
 
 ### Plugins
@@ -94,3 +98,4 @@ nvim lua/badcode/packer.lua
 
 
 ### Want to contribute?
+If you have some good tricks, configs, and plugins,  all contributions are welcome.
