@@ -29,9 +29,6 @@ return require('packer').startup(function(use)
 
     use ( 'tpope/vim-fugitive' )
 
-    use ('rebelot/heirline.nvim')
-    --auto complete
-
     --indent blankline
     use ('lukas-reineke/indent-blankline.nvim')
 
