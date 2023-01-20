@@ -32,36 +32,33 @@ Why not? I know, there is a number of options ( if you use vscode may god have m
 - Core sides are still single threads like Vim but support asynchronous plugins
 - Treesitter - Builtin LSP
 
-### Installation
-Ubuntu:
+### Requirements
+`Neovim:`
 ```sh
 add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install neovim
 ```
 
+> **Warning**
+> If nvim its already installed, remove previous configs.
 
-### Requirements
+```sh
+cd .config
+rm -rf nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+```
 
 `Ripgrep:`
 ```sh
 apt-get install ripgrep
 ```
 
-> **Warning**
-> If nvim its already installed, remove previous configs.
-
-
 `Packer Package Management:`
 ```sh
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-```sh
-rm -rf nvim
-rm -rf ~/.local/share/nvim
-rm -rf ~/.local/state/nvim
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
 ### Usage
@@ -71,6 +68,10 @@ cd .config
 mkdir nvim && cd nvim
 git clone https://github.com/alitokur/neocpp.git .
 ```
+Run following command and you will see millions of errors. 
+
+![Screenshot from 2023-01-20 12-55-52](https://user-images.githubusercontent.com/20575896/213803715-828181f8-cff2-47ea-9711-066a9affde80.png)
+
 
 ### Plugins
                                                                                            
@@ -84,7 +85,6 @@ git clone https://github.com/alitokur/neocpp.git .
 | Statusline         | Neovim statusline                                       | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)       |
 | File Explorer      | File Explorer For Neovim Written In Lua                 | [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)        |
 | Blankline          | Indentation guides to all lines                         | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)      |
-
 
 ### Keymaps
 
