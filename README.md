@@ -68,7 +68,11 @@ cd .config
 mkdir nvim && cd nvim
 git clone https://github.com/alitokur/neocpp.git .
 ```
-Run following command and you will see millions of errors. 
+Run following command and you will see millions of errors. But don't worry.
+
+```sh
+nvim lua/badcode/packer.lua
+```
 
 ![Screenshot from 2023-01-20 12-55-52](https://user-images.githubusercontent.com/20575896/213803715-828181f8-cff2-47ea-9711-066a9affde80.png)
 
