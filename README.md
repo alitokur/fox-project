@@ -41,18 +41,22 @@ sudo apt-get install neovim
 ```
 
 
-## Requirements
-Ubuntu:
+### Requirements
+
+`Ripgrep:`
 ```sh
-apt install python3.8-venv
 apt-get install ripgrep
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
 > **Warning**
 > If nvim its already installed, remove previous configs.
 
+
+`Packer Package Management:`
+```sh
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
 
 ```sh
 rm -rf nvim
@@ -64,56 +68,25 @@ rm -rf ~/.local/state/nvim
 
 ```sh
 cd .config
-mkdir nvim
+mkdir nvim && cd nvim
 git clone https://github.com/alitokur/neocpp.git .
-```
-
-Final Structure 
-```shel
-├── after
-│   └── plugin
-│       ├── colors.lua
-│       ├── comment.lua
-│       ├── fugitive.lua
-│       ├── harpoon.lua
-│       ├── heirline.lua
-│       ├── indent.lua
-│       ├── lsp.lua
-│       ├── lualine.lua
-│       ├── telescope.lua
-│       ├── tree.lua
-│       ├── treesitter.lua
-│       ├── undotree.lua
-│       └── zenmode.lua
-├── dev
-├── init.lua
-├── lua
-│   └── badcode
-│       ├── init.lua
-│       ├── packer.lua
-│       ├── remap.lua
-│       └── set.lua
-├── plugin
-│   └── packer_compiled.lua
-└── README.md
 ```
 
 ### Plugins
                                                                                            
-| Application        | Description                                  | Plugin                     |
-| ------------------ | -------------------------------------------- | -------------------------- |
-| Theme              | -                | [onedark.nvim](https://github.com/navarasu/onedark.nvim)                                  |
-| Plugin Manager     | -                                  | [packer.nvim](https://github.com/wbthomason/packer.nvim)                                 |
-| Fuzzy Finder       | -                                 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)                       |
-| Auto-Completion    | -                                | [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)                            |
-| Undo History       | -                                | [mbbill/undotree](https://github.com/mbbill/undotree)                                    |
-| Commenting         | -                                | [comment.nvim](https://github.com/numToStr/Comment.nvim)                                 |
-| Statusline         | -                               | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)                             |
-| File Explorer      | -                      | [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)                              |
-| Blankline          | -                                | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)          |
+| Application        | Description                                             | Plugin                     |
+| ------------------ | ------------------------------------------------------- | -------------------------- |
+| Theme              | Dark and Light Themes with TreeSitter syntax highlight. | [onedark.nvim](https://github.com/navarasu/onedark.nvim)           |
+| Fuzzy Finder       | Extendable fuzzy finder over lists                      | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) |
+| Auto-Completion    | Autocompletion - Language servers                       | [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)      |
+| Undo History       | To visualize undo history                               | [mbbill/undotree](https://github.com/mbbill/undotree)              |
+| Commenting         | Commenting plugin                                       | [comment.nvim](https://github.com/numToStr/Comment.nvim)           |
+| Statusline         | Neovim statusline                                       | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)       |
+| File Explorer      | File Explorer For Neovim Written In Lua                 | [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)        |
+| Blankline          | Indentation guides to all lines                         | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)      |
 
 
-## Keymaps
+### Keymaps
 
 
 ### Want to contribute?
