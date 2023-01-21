@@ -21,7 +21,7 @@ Contents
  * [Keymaps](#keymaps)
  * [Want to contribute?](#want-to-contribute)
  
-### Why
+## Why
 
 Why not? I know, there is a number of options ( if you use vscode may god have mercy on your soul) but i think using vim is a skill, is not just about code fast, it's about that powerful feeling you get when using it, controlling huge or tiny code bases within your terminal with not a second of stuttering anywhere... So that is why I decided to learn a time ago. It also allows me to customize everything and I can build something exactly the way I want it. The next question is, Why Neovim?
 
@@ -30,7 +30,7 @@ Why not? I know, there is a number of options ( if you use vscode may god have m
 - Core sides are still single threads like Vim but support asynchronous plugins
 - Treesitter - Builtin LSP
 
-### Requirements
+## Requirements
 `Neovim:`
 ```sh
 add-apt-repository ppa:neovim-ppa/unstable
@@ -53,13 +53,20 @@ rm -rf ~/.local/state/nvim
 apt-get install ripgrep
 ```
 
+`fd-find:`
+```sh
+sudo apt install fd-find
+```
+
+
+
 `Packer Package Management:`
 ```sh
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-### Usage
+## Installation
 
 ```sh
 cd .config
@@ -81,7 +88,7 @@ nvim lua/badcode/packer.lua
 3-) Some plugins will not install in the first time. Do it step 2 one more time.
 
 
-### Plugins
+## Plugins
                                                                                            
 | Application        | Description                                             | Plugin                     |
 | ------------------ | ------------------------------------------------------- | -------------------------- |
@@ -94,7 +101,79 @@ nvim lua/badcode/packer.lua
 | File Explorer      | File Explorer For Neovim Written In Lua                 | [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)        |
 | Blankline          | Indentation guides to all lines                         | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)      |
 
-### Keymaps
+## Configuration
+You can change this config file as you want. Use following structure to make modifications
+
+1-) Add your plugins to lua/badcode/packer.lua
+
+```lua
+vim.cmd.packadd('packer.nvim')
+return require('packer').startup(function(use)
+    -- plugin manager
+    use 'wbthomason/packer.nvim'
+   
+   --add your plugins here
+
+end)
+```
+
+2-) Under the after/plugin, create a config.lua for each plugins that you add to packer lua
+
+```shel
+gumball@ubuntu:~/.config/nvim/after/plugin$ tree
+.
+├── plugin_name_1.lua
+├── plugin_name_2.lua
+└── plugin_name_3.lua
+```
+## Theme
+
+<img src="img/onedark.gif" alt="one_dark_theme"> 
+
+packer.lua
+```lua
+    -- onedark
+    use 'navarasu/onedark.nvim'
+end)
+```
+
+onedark.lua
+```lua
+--theme options
+require('onedark').setup {
+    style = 'darker'
+}
+--enable theme
+require('onedark').load()
+```
+
+## Fuzzy Finder
+packer.lua
+```lua
+-- fuzzy finder
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+```
+telescope.lua
+```lua
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<leader>ps', function()
+	builtin.grep_string({ search = vim.fn.input("Grep > ") })
+end)
+```
+
+
+
+
+
+
+
+## Keymaps
 
 
 ### Want to contribute?
