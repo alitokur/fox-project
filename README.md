@@ -148,6 +148,8 @@ require('onedark').load()
 ```
 
 ## Fuzzy Finder
+<img src="img/telescope.gif" alt="one_dark_theme"> 
+
 packer.lua
 ```lua
 -- fuzzy finder
