@@ -1,3 +1,4 @@
+local builtin = require('telescope.builtin')
 --find files under your current wokring directory
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 --search files under git files
