@@ -94,6 +94,7 @@ nvim lua/badcode/packer.lua
 | ------------------ | ------------------------------------------------------- | -------------------------- |
 | Theme              | Dark and Light Themes with TreeSitter syntax highlight. | [onedark.nvim](https://github.com/navarasu/onedark.nvim)           |
 | Fuzzy Finder       | Extendable fuzzy finder over lists                      | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) |
+| Parser             | Language parsers                                        | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)|
 | Auto-Completion    | Autocompletion - Language servers                       | [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)      |
 | Undo History       | To visualize undo history                               | [mbbill/undotree](https://github.com/mbbill/undotree)              |
 | Commenting         | Commenting plugin                                       | [comment.nvim](https://github.com/numToStr/Comment.nvim)           |
@@ -161,6 +162,7 @@ packer.lua
 ```
 telescope.lua
 ```lua
+local builtin = require('telescope.builtin')
 --find files under your current wokring directory
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 --search files under git files
@@ -175,9 +177,39 @@ vim.keymap.set('n', '<leader>ps', function()
 end)
 ```
 
+## Treesitter
 
+```lua
+ -- parser
+    use ({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+    use ( 'nvim-treesitter/playground' )
+```
 
+```lua
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all"
+  ensure_installed = { "help", "c", "cpp", "cmake", "make", "javascript", "json", "vim", "comment", "markdown", "lua" },
 
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  -- Automatically install missing parsers when entering buffer
+  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+  auto_install = true,
+
+  highlight = {
+    -- `false` will disable the whole extension
+    enable = true,
+
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+
+```
 
 
 
