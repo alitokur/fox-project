@@ -120,7 +120,7 @@ end)
 
 2-) Under the after/plugin, create a config.lua for each plugins that you add to packer lua
 
-```shel
+```sh
 gumball@ubuntu:~/.config/nvim/after/plugin$ tree
 .
 ├── plugin_name_1.lua
@@ -131,14 +131,18 @@ gumball@ubuntu:~/.config/nvim/after/plugin$ tree
 
 <img src="img/onedark.gif" alt="one_dark_theme">
 
-packer.lua
+I use onedark as the Theme, but there are definitel more themes. Select what you want.
+
+`packer.lua`
+
 ```lua
     -- onedark
     use 'navarasu/onedark.nvim'
 end)
 ```
 
-onedark.lua
+`onedark.lua`
+
 ```lua
 --theme options
 require('onedark').setup {
@@ -151,7 +155,7 @@ require('onedark').load()
 ## Fuzzy Finder
 <img src="img/telescope.gif" alt="one_dark_theme">
 
-packer.lua
+`packer.lua`
 ```lua
 -- fuzzy finder
     use {
@@ -160,7 +164,7 @@ packer.lua
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 ```
-telescope.lua
+`telescope.lua`
 ```lua
 local builtin = require('telescope.builtin')
 --find files under your current wokring directory
