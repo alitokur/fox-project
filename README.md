@@ -6,10 +6,10 @@
 
 `Neocpp` is a config file for c++ developers. It uses Lua API to be able to build the configuration.
 
- Inspired by our ancient leader [ThePrimeagen](https://github.com/ThePrimeagen), you can find the original 
+ Inspired by our ancient leader [ThePrimeagen](https://github.com/ThePrimeagen), you can find the original
 configs [here](https://github.com/ThePrimeagen/init.lua).
 
-<img src="img/Animation.gif" alt="NeocppGIFDemo">    
+<img src="img/Animation.gif" alt="NeocppGIFDemo">
 
 </div>
 
@@ -20,7 +20,7 @@ Contents
  * [Plugins](#plugins)
  * [Keymaps](#keymaps)
  * [Want to contribute?](#want-to-contribute)
- 
+
 ## Why
 
 Why not? I know, there is a number of options ( if you use vscode may god have mercy on your soul) but i think using vim is a skill, is not just about code fast, it's about that powerful feeling you get when using it, controlling huge or tiny code bases within your terminal with not a second of stuttering anywhere... So that is why I decided to learn a time ago. It also allows me to customize everything and I can build something exactly the way I want it. The next question is, Why Neovim?
@@ -79,17 +79,17 @@ Run following command and you will see millions of errors. But don't worry.
 nvim lua/badcode/packer.lua
 ```
 
-<img src="img/usage.gif" alt="UsageGIF">    
+<img src="img/usage.gif" alt="UsageGIF">
 
-1-) Just skip these error lines with space or enter, 
+1-) Just skip these error lines with space or enter,
 
-2-) then write `:so` and `:PackerSync` command. 
+2-) then write `:so` and `:PackerSync` command.
 
 3-) Some plugins will not install in the first time. Do it step 2 one more time.
 
 
 ## Plugins
-                                                                                           
+
 | Application        | Description                                             | Plugin                     |
 | ------------------ | ------------------------------------------------------- | -------------------------- |
 | Theme              | Dark and Light Themes with TreeSitter syntax highlight. | [onedark.nvim](https://github.com/navarasu/onedark.nvim)           |
@@ -112,7 +112,7 @@ vim.cmd.packadd('packer.nvim')
 return require('packer').startup(function(use)
     -- plugin manager
     use 'wbthomason/packer.nvim'
-   
+
    --add your plugins here
 
 end)
@@ -129,7 +129,7 @@ gumball@ubuntu:~/.config/nvim/after/plugin$ tree
 ```
 ## Theme
 
-<img src="img/onedark.gif" alt="one_dark_theme"> 
+<img src="img/onedark.gif" alt="one_dark_theme">
 
 packer.lua
 ```lua
@@ -149,7 +149,7 @@ require('onedark').load()
 ```
 
 ## Fuzzy Finder
-<img src="img/telescope.gif" alt="one_dark_theme"> 
+<img src="img/telescope.gif" alt="one_dark_theme">
 
 packer.lua
 ```lua
@@ -212,6 +212,9 @@ require'nvim-treesitter.configs'.setup {
 ```
 
 ## Harpooon
+
+<img src="img/harpoon.gif" alt="harpoon">
+
 ```lua
 use ( 'theprimeagen/harpoon' )
 ```
@@ -230,6 +233,9 @@ vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
 ```
 
 ## Undotree
+
+<img src="img/undotree.gif" alt="undotree">
+
 ```lua
 use ( 'mbbill/undotree' )
 ```
@@ -276,6 +282,9 @@ autocmd("BufWinEnter", {
 ```
 
 ## Indent
+
+<img src="img/indent.gif" alt="indet.lua">
+
 ```lua
     --indent blankline
     use ('lukas-reineke/indent-blankline.nvim')
@@ -293,8 +302,10 @@ require("indent_blankline").setup {
     show_current_context_start = true,
 }
 ```
-    
+
 ## LSP
+
+
 ```lua
  use {
         'VonHeikemen/lsp-zero.nvim',
@@ -317,10 +328,11 @@ require("indent_blankline").setup {
             {'rafamadriz/friendly-snippets'},
         }
     }
-    ```
-    
-    ```lua
-    local lsp = require("lsp-zero")
+```
+
+```lua
+
+local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
@@ -399,6 +411,9 @@ vim.diagnostic.config({
 ```
 
 ## File Browser
+
+<img src="img/filebrowser.gif" alt="filebrowser.lua">
+
 ```lua
  --file browser
     use {
@@ -409,8 +424,8 @@ vim.diagnostic.config({
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
     ```
-    
-    ```lua
+
+```lua
     -- examples for your init.lua disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -458,6 +473,9 @@ require('nvim-tree').setup({
 ```
 
 ## Airline
+
+<img src="img/airline.gif" alt="airline.lua">
+
 ```lua
   --airline
     use {
@@ -465,9 +483,9 @@ require('nvim-tree').setup({
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     ```
-    
-    
-    ```lua
+
+
+```lua
     require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -510,8 +528,11 @@ require('nvim-tree').setup({
 }
 
 ```
-    
+
 ## Comment
+
+<img src="img/comment.gif" alt="comment.lua">
+
 ```lua
     --comment
     use {
@@ -521,17 +542,10 @@ require('nvim-tree').setup({
         end
     }
 ```
-    
+
 ```lua
 require('Comment').setup()
 ```
-    
-
-    
-    
-    
-
-
 
 ## Keymaps
 
