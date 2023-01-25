@@ -129,7 +129,11 @@ gumball@ubuntu:~/.config/nvim/after/plugin$ tree
 ├── plugin_name_2.lua
 └── plugin_name_3.lua
 ```
-## Theme
+
+
+<details>
+<summary>Theme</summary>
+
 
 <img src="img/onedark.gif" alt="one_dark_theme">
 
@@ -152,8 +156,11 @@ require('onedark').setup {
 --enable theme
 require('onedark').load()
 ```
+</details>
 
-## Fuzzy Finder
+<details>
+<summary>Telescope</summary>
+
 <img src="img/telescope.gif" alt="one_dark_theme">
 
 `packer.lua`
@@ -182,7 +189,13 @@ vim.keymap.set('n', '<leader>ps', function()
 end)
 ```
 
-## Treesitter
+</details>
+
+
+<details>
+<summary>Treesitter</summary>
+
+
 `packer.lua`
 ```lua
  -- parser
@@ -216,7 +229,12 @@ require'nvim-treesitter.configs'.setup {
 
 ```
 
-## Harpooon
+</details>
+
+
+<details>
+<summary>Harpoon</summary>
+
 
 <img src="img/harpoon.gif" alt="harpoon">
 
@@ -241,7 +259,10 @@ vim.keymap.set("n", "<leader>3", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
 ```
 
-## Undotree
+</details>
+
+<details>
+<summary>Undotree</summary>
 
 <img src="img/undotree.gif" alt="undotree">
 
@@ -256,8 +277,11 @@ use ( 'mbbill/undotree' )
 ```lua
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 ```
+</details>
 
-## Fugitive
+<details>
+<summary>Fugitive</summary>
+
 
 `packer.lua`
 
@@ -297,7 +321,11 @@ autocmd("BufWinEnter", {
 })
 ```
 
-## Indent
+</details>
+
+
+<details>
+<summary>Indent</summary>
 
 <img src="img/indent.gif" alt="indet.lua">
 
@@ -322,8 +350,11 @@ require("indent_blankline").setup {
     show_current_context_start = true,
 }
 ```
+</details>
 
-## LSP
+<details>
+<summary>LSP</summary>
+
 `packer.lua`
 
 ```lua
@@ -430,7 +461,12 @@ vim.diagnostic.config({
 })
 ```
 
-## File Browser
+</details>
+
+<details>
+<summary>File Browser</summary>
+
+ 
 
 <img src="img/filebrowser.gif" alt="filebrowser.lua">
 
@@ -495,8 +531,11 @@ require('nvim-tree').setup({
   },
 })
 ```
+</details>
 
-## Airline
+
+<details>
+<summary>Airline</summary>
 
 <img src="img/airline.gif" alt="airline.lua">
 
@@ -509,6 +548,8 @@ require('nvim-tree').setup({
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 ```
+
+
 
 `airline.lua`
 
@@ -556,7 +597,10 @@ require('nvim-tree').setup({
 
 ```
 
-## Comment
+</details>
+
+<details>
+<summary>Comment</summary>
 
 <img src="img/comment.gif" alt="comment.lua">
 
@@ -577,6 +621,8 @@ require('nvim-tree').setup({
 ```lua
 require('Comment').setup()
 ```
+
+</details>
 
 ## Keymaps :chipmunk:
 
