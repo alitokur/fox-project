@@ -15,13 +15,15 @@ configs [here](https://github.com/ThePrimeagen/init.lua).
 
 Contents
 ========
- * [Why?](#why)
- * [Usage](#usage)
- * [Plugins](#plugins)
- * [Keymaps](#keymaps)
- * [Want to contribute?](#want-to-contribute)
+ * [Why?](#why-fox_face)
+ * [Requirements](#requirements-wolf)
+ * [Installation](#installation-cat2)
+ * [Plugins](#plugins-bear)
+ * [Configuration](#configuration-flamingo)
+ * [Keymaps](#keymaps-chipmunk)
+ * [Want to contribute?](#want-to-contribute-tiger)
 
-## Why
+## Why :fox_face:
 
 Why not? I know, there is a number of options ( if you use vscode may god have mercy on your soul) but i think using vim is a skill, is not just about code fast, it's about that powerful feeling you get when using it, controlling huge or tiny code bases within your terminal with not a second of stuttering anywhere... So that is why I decided to learn a time ago. It also allows me to customize everything and I can build something exactly the way I want it. The next question is, Why Neovim?
 
@@ -30,7 +32,7 @@ Why not? I know, there is a number of options ( if you use vscode may god have m
 - Core sides are still single threads like Vim but support asynchronous plugins
 - Treesitter - Builtin LSP
 
-## Requirements
+## Requirements :wolf:
 `Neovim:`
 ```sh
 add-apt-repository ppa:neovim-ppa/unstable
@@ -66,7 +68,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-## Installation
+## Installation :cat2:
 
 ```sh
 cd .config
@@ -88,7 +90,7 @@ nvim lua/badcode/packer.lua
 3-) Some plugins will not install in the first time. Do it step 2 one more time.
 
 
-## Plugins
+## Plugins :bear:
 
 | Application        | Description                                             | Plugin                     |
 | ------------------ | ------------------------------------------------------- | -------------------------- |
@@ -102,7 +104,7 @@ nvim lua/badcode/packer.lua
 | File Explorer      | File Explorer For Neovim Written In Lua                 | [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)        |
 | Blankline          | Indentation guides to all lines                         | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)      |
 
-## Configuration
+## Configuration :flamingo:
 You can change this config file as you want. Use following structure to make modifications
 
 1-) Add your plugins to lua/badcode/packer.lua
@@ -138,7 +140,6 @@ I use onedark as the Theme, but there are definitel more themes. Select what you
 ```lua
     -- onedark
     use 'navarasu/onedark.nvim'
-end)
 ```
 
 `onedark.lua`
@@ -182,13 +183,13 @@ end)
 ```
 
 ## Treesitter
-
+`packer.lua`
 ```lua
  -- parser
     use ({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
     use ( 'nvim-treesitter/playground' )
 ```
-
+`treesitter.lua`
 ```lua
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
@@ -219,9 +220,13 @@ require'nvim-treesitter.configs'.setup {
 
 <img src="img/harpoon.gif" alt="harpoon">
 
+`packer.lua`
+
 ```lua
 use ( 'theprimeagen/harpoon' )
 ```
+
+`harpoon.lua`
 
 ```lua
 local mark = require("harpoon.mark")
@@ -240,19 +245,26 @@ vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
 
 <img src="img/undotree.gif" alt="undotree">
 
+`packer.lua`
+
 ```lua
 use ( 'mbbill/undotree' )
 ```
+
+`undotree.lua`
 
 ```lua
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 ```
 
 ## Fugitive
+
+`packer.lua`
+
 ```lua
 use ( 'tpope/vim-fugitive' )
 ```
-
+`fugitive.lua`
 ```lua
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
@@ -289,10 +301,14 @@ autocmd("BufWinEnter", {
 
 <img src="img/indent.gif" alt="indet.lua">
 
+`packer.lua`
+
 ```lua
     --indent blankline
     use ('lukas-reineke/indent-blankline.nvim')
 ```
+
+`indent.lua`
 
 ```lua
 
@@ -308,7 +324,7 @@ require("indent_blankline").setup {
 ```
 
 ## LSP
-
+`packer.lua`
 
 ```lua
  use {
@@ -333,7 +349,7 @@ require("indent_blankline").setup {
         }
     }
 ```
-
+`lsp.lua`
 ```lua
 
 local lsp = require("lsp-zero")
@@ -418,6 +434,8 @@ vim.diagnostic.config({
 
 <img src="img/filebrowser.gif" alt="filebrowser.lua">
 
+`packer.lua`
+
 ```lua
  --file browser
     use {
@@ -427,7 +445,9 @@ vim.diagnostic.config({
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
-    ```
+```
+    
+`tree.lua`
 
 ```lua
     -- examples for your init.lua disable netrw at the very start of your init.lua (strongly advised)
@@ -480,14 +500,17 @@ require('nvim-tree').setup({
 
 <img src="img/airline.gif" alt="airline.lua">
 
+`packer.lua`
+
 ```lua
   --airline
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    ```
+```
 
+`airline.lua`
 
 ```lua
     require('lualine').setup {
@@ -537,6 +560,8 @@ require('nvim-tree').setup({
 
 <img src="img/comment.gif" alt="comment.lua">
 
+`packer.lua`
+
 ```lua
     --comment
     use {
@@ -547,12 +572,14 @@ require('nvim-tree').setup({
     }
 ```
 
+`comment.lua`
+
 ```lua
 require('Comment').setup()
 ```
 
-## Keymaps
+## Keymaps :chipmunk:
 
 
-### Want to contribute?
+## Want to contribute? :tiger:
 If you have some good tricks, configs, and plugins,  all contributions are welcome.
