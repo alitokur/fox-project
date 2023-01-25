@@ -161,16 +161,17 @@ require('onedark').load()
 <details>
 <summary>Telescope</summary>
 
-<img src="img/telescope.gif" alt="one_dark_theme">
+##
 
 `packer.lua`
+
 ```lua
 -- fuzzy finder
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
+use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+}
 ```
 `telescope.lua`
 ```lua
@@ -188,6 +189,7 @@ vim.keymap.set('n', '<leader>ps', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 ```
+<img src="img/telescope.gif" alt="one_dark_theme">
 
 </details>
 
