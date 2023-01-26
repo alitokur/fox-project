@@ -232,7 +232,7 @@ require'nvim-treesitter.configs'.setup {
 
 ```
  
-<img src="img/treesitter.gif" alt="treesitter">
+<img src="img/treesitter.jpg" alt="treesitter">
 
 </details>
 
