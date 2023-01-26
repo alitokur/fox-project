@@ -197,6 +197,7 @@ end)
 <details>
 <summary>Treesitter</summary>
 
+ ##
 
 `packer.lua`
 ```lua
@@ -230,6 +231,8 @@ require'nvim-treesitter.configs'.setup {
 }
 
 ```
+ 
+<img src="img/treesitter.gif" alt="treesitter">
 
 </details>
 
