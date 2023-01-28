@@ -1,0 +1,17 @@
+
+-- dashboard.custom_center = {
+--       {icon = '  ',
+--       desc = 'Recently opened files                   ',
+--       action =  'Telescope oldfiles',
+--       shortcut = 'SPC f h'},
+--       {icon = '  ',
+--       desc ='New File                            ',
+--       action =  'DashboardNewFile',
+--       shortcut = 'SPC f b'},
+--       {icon = '  ',
+--       desc = 'Settings                            ',
+--       action = ':edit ~/.config.nvim/init.lua',
+--       shortcut = 'SPC f b'},
+-- }
+--
+-- dashboard.custom_footer = {  {vim.v.version} }

@@ -10,28 +10,26 @@ return require('packer').startup(function(use)
     }
 
     -- theme
-    -- gruvbox
-    --use { "ellisonleao/gruvbox.nvim" }
-
-    -- github themes
-    -- use ({ 'projekt0n/github-nvim-theme' })
-
-    -- onedark
     use 'navarasu/onedark.nvim'
 
-    -- parser
+    -- TODO: add nvim-dap-virtual-text
     use ({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
     use ( 'nvim-treesitter/playground' )
+    use ( 'nvim-treesitter/nvim-treesitter-refactor' )
 
+    --harpoon
     use ( 'theprimeagen/harpoon' )
 
+    --undotree
     use ( 'mbbill/undotree' )
 
+    --fugitive
     use ( 'tpope/vim-fugitive' )
 
     --indent blankline
     use ('lukas-reineke/indent-blankline.nvim')
 
+    --lsp
     use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {
@@ -53,8 +51,6 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'},
         }
     }
-
-    use("folke/zen-mode.nvim")
 
     --file browser
     use {
@@ -80,15 +76,22 @@ return require('packer').startup(function(use)
     }
 
     use {
-  'glepnir/dashboard-nvim',
-  event = 'VimEnter',
-  config = function()
-    require('dashboard').setup {
-      -- config
+        'rcarriga/nvim-notify',
+        config = function ()
+            require("notify").setup {
+                stages = 'fade_in_slide_out',
+                background_colour = 'FloatShadow',
+                timeout = 3000,
+            }
+            vim.notify = require('notify')
+        end
     }
-  end,
-  requires = {'nvim-tree/nvim-web-devicons'}
-}
+
+    use {
+        'glepnir/dashboard-nvim',
+        event = 'VimEnter',
+                requires = {'nvim-tree/nvim-web-devicons'}
+    }
 
 end)
 
