@@ -8,27 +8,20 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-
     -- theme
     use 'navarasu/onedark.nvim'
-
     -- TODO: add nvim-dap-virtual-text
     use ({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
     use ( 'nvim-treesitter/playground' )
     use ( 'nvim-treesitter/nvim-treesitter-refactor' )
-
     --harpoon
     use ( 'theprimeagen/harpoon' )
-
     --undotree
     use ( 'mbbill/undotree' )
-
     --fugitive
     use ( 'tpope/vim-fugitive' )
-
     --indent blankline
     use ('lukas-reineke/indent-blankline.nvim')
-
     --lsp
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -51,7 +44,6 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'},
         }
     }
-
     --file browser
     use {
         'nvim-tree/nvim-tree.lua',
@@ -60,13 +52,11 @@ return require('packer').startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
-
     --airline
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-
     --comment
     use {
         'numToStr/Comment.nvim',
@@ -74,7 +64,6 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-
     use {
         'rcarriga/nvim-notify',
         config = function ()
@@ -86,12 +75,10 @@ return require('packer').startup(function(use)
             vim.notify = require('notify')
         end
     }
-
     use {
         'glepnir/dashboard-nvim',
         event = 'VimEnter',
                 requires = {'nvim-tree/nvim-web-devicons'}
     }
-
 end)
 

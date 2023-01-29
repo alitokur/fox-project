@@ -25,7 +25,7 @@ Contents
 
 ## Why :fox_face:
 
-Why not? I know, there is a number of options ( if you use vscode may god have mercy on your soul) but i think using vim is a skill, is not just about code fast, it's about that powerful feeling you get when using it, controlling huge or tiny code bases within your terminal with not a second of stuttering anywhere... So that is why I decided to learn a time ago. It also allows me to customize everything and I can build something exactly the way I want it. The next question is, Why Neovim?
+Why not? I know, there is a number of options but i think using vim is a skill, is not just about code fast, it's about that powerful feeling you get when using it, controlling huge or tiny code bases within your terminal with not a second of stuttering anywhere... So that is why I decided to learn a time ago. It also allows me to customize everything and I can build something exactly the way I want it. The next question is, Why Neovim?
 
 - Community Supported Codebase (i know its buggy but it means new features always)
 - Lua Support
@@ -231,7 +231,7 @@ require'nvim-treesitter.configs'.setup {
 }
 
 ```
- 
+
 <img src="img/treesitter.png" alt="treesitter">
 
 </details>
@@ -471,7 +471,7 @@ vim.diagnostic.config({
 <details>
 <summary>File Browser</summary>
 
- 
+
 
 <img src="img/filebrowser.gif" alt="filebrowser.lua">
 
@@ -487,7 +487,7 @@ vim.diagnostic.config({
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 ```
-    
+
 `tree.lua`
 
 ```lua
