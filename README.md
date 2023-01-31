@@ -14,7 +14,6 @@ configs [here](https://github.com/ThePrimeagen/init.lua).
 </div>
 
 Contents
-<img src="img/airline.gif" alt="airline.lua">
 ========
  * [Why?](#why-fox_face)
  * [Requirements](#requirements-wolf)
