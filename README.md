@@ -14,6 +14,7 @@ configs [here](https://github.com/ThePrimeagen/init.lua).
 </div>
 
 Contents
+<img src="img/airline.gif" alt="airline.lua">
 ========
  * [Why?](#why-fox_face)
  * [Requirements](#requirements-wolf)
@@ -59,8 +60,6 @@ apt-get install ripgrep
 ```sh
 sudo apt install fd-find
 ```
-
-
 
 `Packer Package Management:`
 ```sh
@@ -134,10 +133,9 @@ gumball@ubuntu:~/.config/nvim/after/plugin$ tree
 <details>
 <summary>Theme</summary>
 
+##
 
-<img src="img/onedark.gif" alt="one_dark_theme">
-
-I use onedark as the Theme, but there are definitel more themes. Select what you want.
+I use 'onedark' , but there are definitel more themes. Select what you want.
 
 `packer.lua`
 
@@ -156,6 +154,8 @@ require('onedark').setup {
 --enable theme
 require('onedark').load()
 ```
+<img src="img/onedark.gif" alt="one_dark_theme">
+
 </details>
 
 <details>
@@ -240,8 +240,7 @@ require'nvim-treesitter.configs'.setup {
 <details>
 <summary>Harpoon</summary>
 
-
-<img src="img/harpoon.gif" alt="harpoon">
+##
 
 `packer.lua`
 
@@ -264,12 +263,15 @@ vim.keymap.set("n", "<leader>3", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
 ```
 
+<img src="img/harpoon.gif" alt="harpoon">
+
 </details>
 
 <details>
 <summary>Undotree</summary>
 
-<img src="img/undotree.gif" alt="undotree">
+##
+
 
 `packer.lua`
 
@@ -284,9 +286,12 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 ```
 </details>
 
+<img src="img/undotree.gif" alt="undotree">
+
 <details>
 <summary>Fugitive</summary>
 
+##
 
 `packer.lua`
 
@@ -332,7 +337,7 @@ autocmd("BufWinEnter", {
 <details>
 <summary>Indent</summary>
 
-<img src="img/indent.gif" alt="indet.lua">
+##
 
 `packer.lua`
 
@@ -355,10 +360,14 @@ require("indent_blankline").setup {
     show_current_context_start = true,
 }
 ```
+<img src="img/indent.gif" alt="indet.lua">
+
 </details>
 
 <details>
 <summary>LSP</summary>
+
+##
 
 `packer.lua`
 
@@ -471,9 +480,8 @@ vim.diagnostic.config({
 <details>
 <summary>File Browser</summary>
 
+##
 
-
-<img src="img/filebrowser.gif" alt="filebrowser.lua">
 
 `packer.lua`
 
@@ -536,13 +544,16 @@ require('nvim-tree').setup({
   },
 })
 ```
+<img src="img/filebrowser.gif" alt="filebrowser.lua">
+
 </details>
 
 
 <details>
 <summary>Airline</summary>
 
-<img src="img/airline.gif" alt="airline.lua">
+##
+
 
 `packer.lua`
 
@@ -602,12 +613,14 @@ require('nvim-tree').setup({
 
 ```
 
+<img src="img/airline.gif" alt="airline.lua">
+
 </details>
 
 <details>
 <summary>Comment</summary>
 
-<img src="img/comment.gif" alt="comment.lua">
+##
 
 `packer.lua`
 
@@ -627,9 +640,21 @@ require('nvim-tree').setup({
 require('Comment').setup()
 ```
 
+<img src="img/comment.gif" alt="comment.lua">
+
 </details>
 
 ## Keymaps :chipmunk:
+
+
+| Command                                       | Description                                             | Plugin                     |
+| --------------------------------------------  | ------------------------------------------------------- | -------------------------- |
+| space                        |                                                         |                            |
+|                              |                                                         |                            |
+| vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")  |                                                         |                            |
+
+
+
 
 
 ## Want to contribute? :tiger:
