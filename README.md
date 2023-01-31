@@ -283,10 +283,12 @@ use ( 'mbbill/undotree' )
 
 ```lua
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+<img src="img/undotree.gif" alt="undotree">
+
 ```
 </details>
 
-<img src="img/undotree.gif" alt="undotree">
 
 <details>
 <summary>Fugitive</summary>
