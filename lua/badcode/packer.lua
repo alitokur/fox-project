@@ -18,8 +18,6 @@ return require('packer').startup(function(use)
     use ( 'theprimeagen/harpoon' )
     --undotree
     use ( 'mbbill/undotree' )
-    --fugitive
-    use ( 'tpope/vim-fugitive' )
     --indent blankline
     use ('lukas-reineke/indent-blankline.nvim')
     --lsp
