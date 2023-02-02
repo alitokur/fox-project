@@ -6,7 +6,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 -- empty setup using defaults
-require("nvim-tree").setup()
+--require("nvim-tree").setup()
 vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeToggle)
 
 
