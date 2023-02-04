@@ -62,21 +62,5 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-    use {
-        'rcarriga/nvim-notify',
-        config = function ()
-            require("notify").setup {
-                stages = 'fade_in_slide_out',
-                background_colour = 'FloatShadow',
-                timeout = 3000,
-            }
-            vim.notify = require('notify')
-        end
-    }
-    use {
-        'glepnir/dashboard-nvim',
-        event = 'VimEnter',
-                requires = {'nvim-tree/nvim-web-devicons'}
-    }
 end)
 
