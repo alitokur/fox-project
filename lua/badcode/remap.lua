@@ -25,6 +25,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- splits and tabbed files
 vim.keymap.set("n", "<A-h>", "<C-w>s")
+vim.keymap.set("n", "<A-v>", "<C-w>v")
 
 vim.keymap.set("n", "<c-h>", "<c-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
@@ -37,3 +38,8 @@ vim.keymap.set("n", "<A-a>", ":vertical resize -3<CR>")
 vim.keymap.set("n", "<A-w>", ":resize +3<CR>")
 vim.keymap.set("n", "<A-s>", ":resize -2<CR>")
 
+--change 2 splits
+vim.keymap.set("n", "<leader>th", "<C-w>t<C-w>H")
+vim.keymap.set("n", "<leader>tk", "<C-w>t<C-w>K")
+
+ 
