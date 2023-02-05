@@ -602,14 +602,21 @@ require('Comment').setup()
 ## Keymaps :chipmunk:
 
 
-| Command                                       | Description                                             | Plugin                     |
-| --------------------------------------------  | ------------------------------------------------------- | -------------------------- |
-| space                        |                                                         |                            |
-|                              |                                                         |                            |
-| vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")  |                                                         |                            |
-
-
-
+| Command                            | Keymap                                 | Description                         |
+| ---------------------------------  | -------------------------------------- | ------------------------------------|
+| splits                             | Alt + h                                | Create horizantal split             |
+| splits                             | Alt + h                                | Create vertical split               |
+| splits                             | Ctrl + h                               | Move left                           |
+| splits                             | Ctrl + j                               | Move right                          |
+| splits                             | Ctrl + k                               | Move up                             |
+| splits                             | Ctrl + l                               | Move down                           |
+| splits                             | Ctrl + h                               | Move left                           |
+| splits                             | Alt + d                                | Vertical resize +3                  |
+| splits                             | Alt + a                                | Vertical resize -3                  |
+| splits                             | Alt + w                                | Horizantal resize +3                |
+| splits                             | Alt + s                                | Horizaton resize  -3                |
+| splits                             | Space + th                             | Make vertical split to horizantal   |
+| splits                             | Space + tk                             | Make horizantal split to vertical   |
 
 
 ## Want to contribute? :tiger:
