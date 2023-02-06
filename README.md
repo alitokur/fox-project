@@ -601,7 +601,6 @@ require('Comment').setup()
 
 ## Keymaps :chipmunk:
 
-
 | Command                            | Keymap                                 | Description                         |
 | ---------------------------------  | -------------------------------------- | ------------------------------------|
 | splits                             | Alt + h                                | Create horizantal split             |
@@ -617,7 +616,35 @@ require('Comment').setup()
 | splits                             | Alt + s                                | Horizaton resize  -3                |
 | splits                             | Space + th                             | Make vertical split to horizantal   |
 | splits                             | Space + tk                             | Make horizantal split to vertical   |
-
+| movement                           | J                                      | Move selected blocks to up          |
+| movement                           | K                                      | Move selected blocks to down        |
+| movement                           | Ctrl + d                               | Half page jumping down              |
+| movement                           | Ctrl + u                               | Half page jumping up                |
+| copy-paste                         | Space + p                              | Paste but keep buffer               |
+| comment - (normal)                 | gcc                                    | linewise comment toggle             |
+| comment - (normal)                 | gbc                                    | blockwise comment toggle            | 
+| comment - (visual)                 | gc                                     | Linewise comment toggle             |
+| comment - (visual)                 | gb                                     | Blockwise comment toggle            |
+| telescope - (normal)               | Space + ff                             | Find files                          |
+| telescope - (normal)               | Space + fg                             | Find in git files                   |
+| telescope - (normal)               | Space + lg                             | Live grep                           |
+| telescope - (normal)               | Space + gs                             | Grep string                         |
+| telescope - (normal)               | Space + ps                             | Grep with command                   |
+| harpoon - (normal)                 | Space + a                              | Add to harpoon list                 |
+| harpoon - (normal)                 | Ctrl +  e                              | Open harpoon list                   |
+| harpoon - (normal)                 | Space + 1  (or 2,3,4)                  | Jump the seletected buffer          |
+| nvim-tree - (normal)               | Space + pv                             | Toggle nvim-tree                    |
+| undotree - (normal)                | Space + u                              | Toggle undotree                     |
+| treesitter - (normal)              | grr                                    | Smart rename                        |
+| lsp-zero   - (normal)              | gd                                     | Find definition                     |
+| lsp-zero   - (normal)              | K                                      | Display information                 |
+| lsp-zero   - (normal)              | Space + vws                            | xxxxxxxxxxxxx                       |
+| lsp-zero   - (normal)              | Space + vd                             | xxxxxxxxxxxxx                       |
+| lsp-zero   - (normal)              | [d                                     | xxxxxxxxxxxxx                       |
+| lsp-zero   - (normal)              | ]d                                     | xxxxxxxxxxxxx                       |
+| lsp-zero   - (normal)              | Space + vca                            | xxxxxxxxxxxxx                       |
+| lsp-zero   - (normal)              | Space + vrr                            | xxxxxxxxxxxxx                       |
+| lsp-zero   - (normal)              | Space + vrn                            | xxxxxxxxxxxxx                       |
 
 ## Want to contribute? :tiger:
 If you have some good tricks, configs, and plugins,  all contributions are welcome.
