@@ -645,6 +645,8 @@ require('Comment').setup()
 | lsp-zero   - (normal)              | Space + vca                            | xxxxxxxxxxxxx                       |
 | lsp-zero   - (normal)              | Space + vrr                            | xxxxxxxxxxxxx                       |
 | lsp-zero   - (normal)              | Space + vrn                            | xxxxxxxxxxxxx                       |
+| nvim-tree  - (map)                 | Ctrl + v                               | Vertical split                      |
+| lsp-zero   - (map)                 | Ctrl + x                               | Horizantal split                    |
 
 ## Want to contribute? :tiger:
 If you have some good tricks, configs, and plugins,  all contributions are welcome.
