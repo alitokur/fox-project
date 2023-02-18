@@ -4,12 +4,12 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
   'cmake',
-  'sumneko_lua',
+  'lua_ls',
   'clangd',
 })
 
 -- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             diagnostics = {
