@@ -1,4 +1,4 @@
 require('onedark').setup {
-    style = 'darker'
+    style = 'warm'
 }
 require('onedark').load()
