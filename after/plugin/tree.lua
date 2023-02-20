@@ -20,13 +20,13 @@ local function open_nvim_tree(data)
     return
   end
 
-  if is_real_file or is_no_name_file then
-    require("nvim-tree.api").tree.toggle { focus = false, find_file = true }
-    return
-  end
+  -- if is_real_file or is_no_name_file then
+  --   require("nvim-tree.api").tree.toggle { focus = false, find_file = true }
+  --   return
+  -- end
 end
 
--- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 local HEIGHT_RATIO = 0.8  -- You can change this
 local WIDTH_RATIO = 0.5   -- You can change this too
