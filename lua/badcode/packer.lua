@@ -70,16 +70,14 @@ return require('packer').startup(function(use)
         end
     }
     
-
     --gitsigns.nvim
     use {
         'lewis6991/gitsigns.nvim',
     }
-    
     --toggleterm
-    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-        require("toggleterm").setup()
-    end}
+    use {
+        "akinsho/toggleterm.nvim", tag = '*',
+    }
 
 end)
 
