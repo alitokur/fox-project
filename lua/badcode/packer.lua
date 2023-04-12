@@ -79,5 +79,10 @@ return require('packer').startup(function(use)
         "akinsho/toggleterm.nvim", tag = '*',
     }
 
+    --symbols-outline
+    use {
+        "simrat39/symbols-outline.nvim"
+    }
+
 end)
 
