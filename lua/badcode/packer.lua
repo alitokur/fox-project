@@ -84,5 +84,23 @@ return require('packer').startup(function(use)
         "simrat39/symbols-outline.nvim"
     }
 
+    --barbar
+    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+
+
+    use({
+        "utilyre/barbecue.nvim",
+        tag = "*",
+        requires = {
+            "SmiteshP/nvim-navic",
+        },
+        after = "nvim-web-devicons", -- keep this if you're using NvChad
+        config = function()
+            require("barbecue").setup()
+        end,
+    })
+
+    use("petertriho/nvim-scrollbar")
+
 end)
 
