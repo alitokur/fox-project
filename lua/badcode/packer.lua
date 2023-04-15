@@ -9,7 +9,9 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     -- theme
-    use 'navarasu/onedark.nvim'
+    -- use 'navarasu/onedark.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
+
     -- TODO: add nvim-dap-virtual-text
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -18,7 +20,6 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
-
     use ( 'nvim-treesitter/playground' )
     use ( 'nvim-treesitter/nvim-treesitter-refactor' )
     --harpoon
@@ -69,7 +70,6 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-    
     --gitsigns.nvim
     use {
         'lewis6991/gitsigns.nvim',
@@ -87,7 +87,6 @@ return require('packer').startup(function(use)
     --barbar
     use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
-
     use({
         "utilyre/barbecue.nvim",
         tag = "*",
@@ -99,7 +98,7 @@ return require('packer').startup(function(use)
             require("barbecue").setup()
         end,
     })
-
+    --scroolbar
     use("petertriho/nvim-scrollbar")
 
 end)
