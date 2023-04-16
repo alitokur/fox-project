@@ -3,10 +3,10 @@ local opts = {
   show_guides = true,
   auto_preview = false,
   position = 'left',
-  width = 20,
+  width = 10,
   relative_width = true,
   auto_close = false,
-  show_numbers = true,
+  show_numbers = false,
   show_relative_numbers = false,
   show_symbol_details = true,
   preview_bg_highlight = 'Pmenu',
@@ -63,4 +63,4 @@ local opts = {
 }
 
 require("symbols-outline").setup(opts)
-vim.keymap.set("n", "<leader>a", vim.cmd.SymbolsOutline)
+vim.keymap.set("n", "<leader>q", vim.cmd.SymbolsOutline)
