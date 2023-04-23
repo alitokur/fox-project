@@ -9,8 +9,7 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     -- theme
-    use 'navarasu/onedark.nvim'
-    -- TODO: add nvim-dap-virtual-text
+    use { "sainnhe/sonokai" } 
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -18,7 +17,6 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
-
     use ( 'nvim-treesitter/playground' )
     use ( 'nvim-treesitter/nvim-treesitter-refactor' )
     --harpoon
@@ -47,6 +45,7 @@ return require('packer').startup(function(use)
             -- Snippets
             {'L3MON4D3/LuaSnip'},
             {'rafamadriz/friendly-snippets'},
+            {'onsails/lspkind-nvim'},
         }
     }
     --file browser
@@ -69,7 +68,6 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-    
     --gitsigns.nvim
     use {
         'lewis6991/gitsigns.nvim',
@@ -77,6 +75,33 @@ return require('packer').startup(function(use)
     --toggleterm
     use {
         "akinsho/toggleterm.nvim", tag = '*',
+    }
+    --symbols-outline
+    use {
+        "simrat39/symbols-outline.nvim"
+    }
+    --barbar
+    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+    --barbecue
+    use({
+        "utilyre/barbecue.nvim",
+        tag = "*",
+        requires = {
+            "SmiteshP/nvim-navic",
+        },
+        after = "nvim-web-devicons", -- keep this if you're using NvChad
+        config = function()
+            require("barbecue").setup()
+        end,
+    })
+    --scroolbar
+    use("petertriho/nvim-scrollbar")
+    use {
+        "startup-nvim/startup.nvim",
+        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+        config = function()
+            require"startup".setup()
+        end
     }
 
 end)
