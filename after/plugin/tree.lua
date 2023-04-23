@@ -1,29 +1,17 @@
--- examples for your init.lua disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
--- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
-
--- empty setup using defaults
---require("nvim-tree").setup()
 vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeToggle)
 
 local function open_nvim_tree(data)
   local is_real_file = vim.fn.filereadable(data.file) == 1
   local is_no_name_file = data.file == "" and vim.bo[data.buf].buftype == ""
   local is_a_directory = vim.fn.isdirectory(data.file) == 1
-
   if is_a_directory then
     vim.cmd.cd(data.file)
     require("nvim-tree.api").tree.open()
     return
   end
-
-  -- if is_real_file or is_no_name_file then
-  --   require("nvim-tree.api").tree.toggle { focus = false, find_file = true }
-  --   return
-  -- end
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
