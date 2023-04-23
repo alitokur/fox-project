@@ -76,15 +76,13 @@ return require('packer').startup(function(use)
     use {
         "akinsho/toggleterm.nvim", tag = '*',
     }
-
     --symbols-outline
     use {
         "simrat39/symbols-outline.nvim"
     }
-
     --barbar
     use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
-
+    --barbecue
     use({
         "utilyre/barbecue.nvim",
         tag = "*",
@@ -98,7 +96,6 @@ return require('packer').startup(function(use)
     })
     --scroolbar
     use("petertriho/nvim-scrollbar")
-
     use {
         "startup-nvim/startup.nvim",
         requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
@@ -106,7 +103,6 @@ return require('packer').startup(function(use)
             require"startup".setup()
         end
     }
-
 
 end)
 
