@@ -8,7 +8,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 --take the below line and appends it to current line
 vim.keymap.set("n", "J", "mzJ`z")
 
-
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
 

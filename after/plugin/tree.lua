@@ -1,7 +1,9 @@
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeToggle)
+vim.keymap.set("n", "<Esc>", vim.cmd.NvimTreeClose)
 
 local function open_nvim_tree(data)
   local is_real_file = vim.fn.filereadable(data.file) == 1
