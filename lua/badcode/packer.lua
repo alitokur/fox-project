@@ -9,7 +9,8 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     -- theme
-    use { "rebelot/kanagawa.nvim" }
+    use "olimorris/onedarkpro.nvim"
+    --treesitter 
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
