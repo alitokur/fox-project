@@ -1,12 +1,12 @@
 <div align="center">
 
-# neocpp
+# Fox Project
 
 <img src="https://img.shields.io/github/last-commit/alitokur/neocpp?color=yellow&display_timestamp=committer" alt="LastCommit"> <img src="https://img.shields.io/badge/nvim-v0.9-blueviolet" alt="Neovim"> <img src="https://img.shields.io/github/contributors/alitokur/neocpp?color=red" alt="Contributors">
 
-`Neocpp` is a config file for c++ developers. It uses Lua API to be able to build the configuration.
+`Fox Project` is a config file for the developers. It uses Lua API to be able to build the configuration.
 
- Inspired by our ancient leader [ThePrimeagen](https://github.com/ThePrimeagen), you can find the original
+Inspired by our ancient leader [ThePrimeagen](https://github.com/ThePrimeagen), you can find the original
 configs [here](https://github.com/ThePrimeagen/init.lua).
 
 <img src="img/Animation.gif" alt="NeocppGIFDemo">
@@ -25,12 +25,19 @@ Contents
 
 ## Why :fox_face:
 
-Why not? I know, there is a number of options but i think using vim is a skill, is not just about code fast, it's about that powerful feeling you get when using it, controlling huge or tiny code bases within your terminal with not a second of stuttering anywhere... So that is why I decided to learn a time ago. It also allows me to customize everything and I can build something exactly the way I want it. The next question is, Why Neovim?
+Why not? I know, there are numerous options available, but i firmly believe that using Vim 
+is more that just coding fast- it's a skill. There's a powerful feeling that comes with using Vim, 
+effortlessly controlling vast or compact code bases within your terminal without any stuttering.
+That's precisely why I decided to learn it some time ago. 
+The next question is, Why Neovim?
 
-- Community Supported Codebase (i know its buggy but it means new features always)
-- Lua Support
-- Core sides are still single threads like Vim but support asynchronous plugins
-- Treesitter - Builtin LSP
+- Community-supported codebase. While it may have some occasional bugs, this 
+support means that new features are consistently being introduced, keeping it 
+up to date and relevant. 
+- Lua support as its scripting language, which provides enhanced flexibility and 
+expressiveness for configuring and extending the editor. 
+- Supporting asynchronous plugins.
+- Native support for the Language Server Protocol (LSP) 
 
 ## Requirements :wolf:
 `Neovim:`
