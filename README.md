@@ -2,21 +2,20 @@
 
 <h1> fox-project </h1>
 
-<!-- ![Work In Progress](https://img.shields.io/badge/-WORK%20IN%20PROGRESS-orange) -->
+![Work In Progress](https://img.shields.io/badge/-WORK%20IN%20PROGRESS-orange)
 <img src="https://img.shields.io/github/last-commit/alitokur/neocpp?color=yellow&display_timestamp=committer" alt="LastCommit"> 
-<img src="https://img.shields.io/badge/nvim-v0.9-blueviolet" alt="Neovim"> 
-<img src="https://img.shields.io/github/contributors/alitokur/neocpp?color=red" alt="Contributors">
+<img src="https://img.shields.io/github/downloads/alitokur/fox-project/v1.0.0/total?logo=github&label=release&color=purple" alt="Release">
+<img src="https://img.shields.io/github/contributors/alitokur/neocpp?color=red" alt="Contributors"><br>
 <img src="https://img.shields.io/badge/Linux-yellow?logo=Linux&logoColor=white" alt="Linux">
 <img src="https://img.shields.io/badge/macOS-black?logo=Apple&logoColor=white" alt="macOS">
 <img src="https://img.shields.io/badge/NEOVIM-Green?logo=Neovim&logoColor=white" alt="Neovim">
 
-<img src="https://img.shields.io/github/downloads/alitokur/fox-project/v1.0.0/total?logo=github&label=release&color=purple" alt="Release">
 
 <h5> `Fox Project` is a config file for the all developers. It uses Lua API 
 to be able to build the configuration. <h5>
 
-</h6> Inspired by our ancient leader [ThePrimeagen](https://github.com/ThePrimeagen), you can find the original
-configs [here](https://github.com/ThePrimeagen/init.lua). <h6>
+<h6> Inspired by our ancient leader [ThePrimeagen](https://github.com/ThePrimeagen), you can find the original
+configs [here](https://github.com/ThePrimeagen/init.lua). </h6>
 
 <img src="img/Animation.gif" alt="NeocppGIFDemo">
 
