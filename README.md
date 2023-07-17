@@ -1,13 +1,20 @@
 <div align="center">
 
-# Fox Project
+<h1> fox-project </h1>
 
-<img src="https://img.shields.io/github/last-commit/alitokur/neocpp?color=yellow&display_timestamp=committer" alt="LastCommit"> <img src="https://img.shields.io/badge/nvim-v0.9-blueviolet" alt="Neovim"> <img src="https://img.shields.io/github/contributors/alitokur/neocpp?color=red" alt="Contributors">
+![Work In Progress](https://img.shields.io/badge/-WORK%20IN%20PROGRESS-orange)
+<img src="https://img.shields.io/github/last-commit/alitokur/neocpp?color=yellow&display_timestamp=committer" alt="LastCommit"> <img src="https://img.shields.io/badge/nvim-v0.9-blueviolet" alt="Neovim"> 
+<img src="https://img.shields.io/github/contributors/alitokur/neocpp?color=red" alt="Contributors">
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+<img src="https://img.shields.io/github/downloads/alitokur/fox-project/v1.0.0/total?logo=github&label=release&color=purple"alt="Release">
+<img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS">
+<img src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white" alt="Neovim">
 
-`Fox Project` is a config file for the developers. It uses Lua API to be able to build the configuration.
+<h5> `Fox Project` is a config file for the all developers. It uses Lua API 
+to be able to build the configuration. <h5>
 
-Inspired by our ancient leader [ThePrimeagen](https://github.com/ThePrimeagen), you can find the original
-configs [here](https://github.com/ThePrimeagen/init.lua).
+</h6> Inspired by our ancient leader [ThePrimeagen](https://github.com/ThePrimeagen), you can find the original
+configs [here](https://github.com/ThePrimeagen/init.lua). <h6>
 
 <img src="img/Animation.gif" alt="NeocppGIFDemo">
 
