@@ -82,7 +82,9 @@ return require('packer').startup(function(use)
         "simrat39/symbols-outline.nvim"
     }
     --barbar
-    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+    --[[     use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'} ]]
+    --bufferline.nvim
+    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
     --barbecue
     use({
         "utilyre/barbecue.nvim",
@@ -105,6 +107,11 @@ return require('packer').startup(function(use)
         end
     }
     use {"ecthelionvi/NeoColumn.nvim"}
+
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
+    }
 
 end)
 
