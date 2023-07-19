@@ -48,6 +48,7 @@ expressiveness for configuring and extending the editor.
 - Native support for the Language Server Protocol (LSP) 
 
 ## Requirements :wolf:
+
 `Neovim:`
 ```sh
 add-apt-repository ppa:neovim-ppa/unstable
