@@ -113,5 +113,19 @@ return require('packer').startup(function(use)
         branch = 'v2', -- optional but strongly recommended
     }
 
+    use {
+        'norcalli/nvim-colorizer.lua'
+    }
+
+    use {
+        'folke/todo-comments.nvim'
+    }
+
+    use{
+        "folke/trouble.nvim"
+    }
+
 end)
+
+
 
