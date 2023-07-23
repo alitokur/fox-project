@@ -1,16 +1,43 @@
 local lsp = require('lsp-zero').preset({"recommended"})
 
-lsp.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp.default_keymaps({buffer = bufnr})
-end)
+-- Fix Undefined global 'vim'
+lsp.configure('lua_ls', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+})
 
 lsp.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp.default_keymaps({buffer = bufnr})
+    -- see :help lsp-zero-keybindings
+    -- to learn the available actions
+    lsp.default_keymaps({buffer = bufnr})
+
+    -- Neovim LSP Pickers
+    -- https://github.com/nvim-telescope/telescope.nvim#neovim-lsp-pickers
+    vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = true})
+    vim.keymap.set('n', 'gs', '<cmd>Telescope lsp_document_symbols<cr>', {buffer = true})
+    vim.keymap.set('n', 'gD', '<cmd>Telescope lsp_implementations<cr>', {buffer = true})
+    vim.keymap.set('n', 'gd', '<cmd>Telescope lsp_definitions<cr>', {buffer = true})
 end)
+
+-- list: https://github.com/williamboman/mason-lspconfig.nvim
+lsp.ensure_installed({
+    "clangd",
+    "lua_ls",
+    "marksman",
+    "pyre",
+    "rust_analyzer",
+    "cmake",
+    "bashls",
+    "lemminx",
+    "ltex",
+    "jsonls",
+    "docker_compose_language_service",
+})
 
 lsp.set_sign_icons({
     error = '✘',
@@ -19,8 +46,24 @@ lsp.set_sign_icons({
     info = ''
 })
 
+--formatter
+--cf is using 2 space as a tab :(
+-- FIXME: modify clang formatter
+-- lsp.format_on_save({
+--     format_opts = {
+--         async = false,
+--         timeout_ms = 10000,
+--     },
+--     servers = {
+--         ['clangd'] = {'cpp'},
+--     }
+-- })
+
+-- keybinding
+
 lsp.setup()
- -- ####### CMP ######## --
+
+-- ####### CMP ######## --
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 cmp.setup({
