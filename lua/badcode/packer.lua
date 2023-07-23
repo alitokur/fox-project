@@ -1,22 +1,7 @@
 vim.cmd.packadd('packer.nvim')
-
---FIXME: Not working
---
--- local ensure_packer = function()
---     local fn = vim.fn
---     local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
---     if fn.empty(fn.glob(install_path)) > 0 then
---         fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
---         vim.cmd [[packadd packer.nvim]]
---         return true
---     end
---     return false
--- end
--- local packer_bootstrap = ensure_packer()
-
 return require('packer').startup(function(use)
     -- plugin manager
-    use {'wbthomason/packer.nvim'}
+    use 'wbthomason/packer.nvim'
     -- fuzzy finder
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -25,7 +10,7 @@ return require('packer').startup(function(use)
     }
     -- theme
     use ({ 'sainnhe/everforest' })
-    --treesitter 
+    --treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -41,29 +26,34 @@ return require('packer').startup(function(use)
     use ( 'mbbill/undotree' )
     --indent blankline
     use ('lukas-reineke/indent-blankline.nvim')
-    --lsp
     use {
         'VonHeikemen/lsp-zero.nvim',
+        branch = 'v2.x',
         requires = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' },
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
+            {'neovim/nvim-lspconfig'},             -- Required
+            {                                      -- Optional
+            'williamboman/mason.nvim',
+            run = function()
+                pcall(vim.api.nvim_command, 'MasonUpdate')
+            end,
+        },
+        {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-buffer' },
-            { 'hrsh7th/cmp-path' },
-            { 'saadparwaiz1/cmp_luasnip' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'hrsh7th/cmp-nvim-lua' },
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},     -- Required
+        {'hrsh7th/cmp-nvim-lsp'}, -- Required
+        {'L3MON4D3/LuaSnip'},     -- Required
+        {"rafamadriz/friendly-snippets"},
+        {"saadparwaiz1/cmp_luasnip"},
+        {"hrsh7th/cmp-buffer"},
 
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
-            {'onsails/lspkind-nvim'},
-        }
+        --lspkind
+        {"onsails/lspkind-nvim"},
     }
+}
+
+
     --file browser
     use {
         'nvim-tree/nvim-tree.lua',
@@ -97,7 +87,7 @@ return require('packer').startup(function(use)
         "simrat39/symbols-outline.nvim"
     }
     --barbar
-    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'} 
+    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
     --barbecue
     use({
         "utilyre/barbecue.nvim",
@@ -139,19 +129,11 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'rmagatti/goto-preview',
-        config = function()
-            require('goto-preview').setup {}
-        end
-    }
-
-    --FIXME: Not working
-    -- if packer_bootstrap then
-    --     require('packer').sync()
-    -- end
+  'rmagatti/goto-preview',
+  config = function()
+    require('goto-preview').setup {}
+  end
+}
 
 
 end)
-
-
-
