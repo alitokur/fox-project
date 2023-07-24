@@ -128,6 +128,8 @@ return require('packer').startup(function(use)
         "folke/trouble.nvim"
     }
 
+    use{"HiPhish/rainbow-delimiters.nvim"}
+
     use {
   'rmagatti/goto-preview',
   config = function()

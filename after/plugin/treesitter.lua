@@ -12,25 +12,16 @@ require'nvim-treesitter.configs'.setup {
         "markdown",
         "lua",
         "python",
-        "rust"},
+        "rust"
+    },
 
-        sync_install = false,
+    sync_install = false,
 
-        auto_install = true,
+    auto_install = true,
 
-        highlight = {
-            enable = true,
-            additional_vim_regex_highlighting = false,
-        },
-
-        refactor = {
-            highlight_definitions = {enable = true},
-            smart_rename = {
-                enable = true,
-                keymaps = {
-                    smart_rename = "grr",
-                },
-            },
-        },
-    }
+    highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+    },
+}
 
