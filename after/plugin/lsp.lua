@@ -40,10 +40,12 @@ lsp.ensure_installed({
 })
 
 lsp.set_sign_icons({
-    error = '✘',
-    warn = '▲',
-    hint = '⚑',
-    info = ''
+      error = "",
+      warn = "",
+      hint = "",
+      info = "",
+      other = "",
+
 })
 
 --formatter
