@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
     }
     -- theme
     use ({ 'sainnhe/everforest' })
-    --treesitter 
+    --treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -19,36 +19,40 @@ return require('packer').startup(function(use)
         end,
     }
     use ( 'nvim-treesitter/playground' )
-    use ( 'nvim-treesitter/nvim-treesitter-refactor' )
     --harpoon
     use ( 'theprimeagen/harpoon' )
     --undotree
     use ( 'mbbill/undotree' )
     --indent blankline
     use ('lukas-reineke/indent-blankline.nvim')
-    --lsp
     use {
         'VonHeikemen/lsp-zero.nvim',
+        branch = 'v2.x',
         requires = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' },
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
+            {'neovim/nvim-lspconfig'},             -- Required
+            {                                      -- Optional
+            'williamboman/mason.nvim',
+            run = function()
+                pcall(vim.api.nvim_command, 'MasonUpdate')
+            end,
+        },
+        {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-buffer' },
-            { 'hrsh7th/cmp-path' },
-            { 'saadparwaiz1/cmp_luasnip' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'hrsh7th/cmp-nvim-lua' },
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},     -- Required
+        {'hrsh7th/cmp-nvim-lsp'}, -- Required
+        {'L3MON4D3/LuaSnip'},     -- Required
+        {"rafamadriz/friendly-snippets"},
+        {"saadparwaiz1/cmp_luasnip"},
+        {"hrsh7th/cmp-buffer"},
 
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
-            {'onsails/lspkind-nvim'},
-        }
+        --lspkind
+        {"onsails/lspkind-nvim"},
     }
+}
+
+
     --file browser
     use {
         'nvim-tree/nvim-tree.lua',
@@ -106,5 +110,40 @@ return require('packer').startup(function(use)
     }
     use {"ecthelionvi/NeoColumn.nvim"}
 
-end)
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
+    }
 
+    use {
+        'norcalli/nvim-colorizer.lua'
+    }
+
+    use {
+        'folke/todo-comments.nvim'
+    }
+
+    use{
+        "folke/trouble.nvim"
+    }
+
+    use 'folke/lsp-colors.nvim'
+
+    use {
+  'rmagatti/goto-preview',
+  config = function()
+    require('goto-preview').setup {}
+  end
+}
+
+-- nvim v0.7.2
+use({
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    requires = {
+        "nvim-lua/plenary.nvim",
+    },
+})
+
+
+end)

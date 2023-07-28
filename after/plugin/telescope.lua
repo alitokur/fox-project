@@ -12,3 +12,25 @@ vim.keymap.set('n', '<leader>ps', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 
+require('telescope').setup{
+  defaults = {
+    -- ...
+  },
+  pickers = {
+    find_files = {
+      theme = "dropdown",
+    },
+    grep_string = {
+      theme = "dropdown",
+    },
+    lsp_definitions = {
+        theme = "dropdown"
+    },
+    lsp_references = {
+        theme = "dropdown"
+    },
+  },
+  extensions = {
+    -- ...
+  }
+}
