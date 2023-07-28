@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
         end,
     }
     use ( 'nvim-treesitter/playground' )
-    use ( 'nvim-treesitter/nvim-treesitter-refactor' )
     --harpoon
     use ( 'theprimeagen/harpoon' )
     --undotree
@@ -127,8 +126,6 @@ return require('packer').startup(function(use)
     use{
         "folke/trouble.nvim"
     }
-
-    use{"HiPhish/rainbow-delimiters.nvim"}
 
     use {
   'rmagatti/goto-preview',
