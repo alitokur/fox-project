@@ -127,12 +127,23 @@ return require('packer').startup(function(use)
         "folke/trouble.nvim"
     }
 
+    use 'folke/lsp-colors.nvim'
+
     use {
   'rmagatti/goto-preview',
   config = function()
     require('goto-preview').setup {}
   end
 }
+
+-- nvim v0.7.2
+use({
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    requires = {
+        "nvim-lua/plenary.nvim",
+    },
+})
 
 
 end)
