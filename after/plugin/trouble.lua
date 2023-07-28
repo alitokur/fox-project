@@ -6,7 +6,7 @@ local telescope = require("telescope")
 telescope.setup {
   defaults = {
     mappings = {
-      i = { ["<C-n>"] = trouble.open_with_trouble },
+      i = { ["<C-gg>"] = trouble.open_with_trouble },
       n = { ["<c-o>"] = trouble.open_with_trouble },
     },
   },
