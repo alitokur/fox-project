@@ -1,5 +1,5 @@
 -- Lua
-local status_ok, gitsigns = pcall(require, "lsp-colors")
+local status_ok, lsp_colors = pcall(require, "lsp-colors")
 if not status_ok then
 	return
 end

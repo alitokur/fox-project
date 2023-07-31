@@ -1,9 +1,7 @@
-local status_ok, colorizer = pcall(require, "everforest")
+local status_ok, colors = pcall(require, "everforest")
 if not status_ok then
 	return
 end
-
-require("everforest").setup()
 require("everforest").load()
 -- vim.cmd [[set background=dark]]
 -- vim.cmd [[set termguicolors]]

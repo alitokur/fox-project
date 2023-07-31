@@ -1,8 +1,7 @@
-local status_ok, gitsigns = pcall(require, "harpoon")
+local status_ok, harpoon = pcall(require, "harpoon")
 if not status_ok then
 	return
 end
-
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 vim.keymap.set("n", "<leader>a", mark.add_file)

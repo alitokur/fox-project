@@ -1,4 +1,4 @@
-local status_ok, gitsigns = pcall(require, "NeoColumn")
+local status_ok, neocolum = pcall(require, "NeoColumn")
 if not status_ok then
     return
 end

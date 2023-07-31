@@ -1,8 +1,7 @@
-local status_ok, gitsigns = pcall(require, "goto-preview")
+local status_ok, goto_preview = pcall(require, "goto-preview")
 if not status_ok then
 	return
 end
-
 require('goto-preview').setup {
   width = 120; -- Width of the floating window
   height = 15; -- Height of the floating window

@@ -1,4 +1,4 @@
-local status_ok, gitsigns = pcall(require, "lsp-zero")
+local status_ok, lsp_zero = pcall(require, "lsp-zero")
 if not status_ok then
 	return
 end

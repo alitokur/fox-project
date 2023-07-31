@@ -1,4 +1,4 @@
-local status_ok, gitsigns = pcall(require, "symbols-outline")
+local status_ok, symbols_outline = pcall(require, "symbols-outline")
 if not status_ok then
     return
 end

@@ -1,5 +1,6 @@
-local status_ok, gitsigns = pcall(require, "nvim-treesitter")
+local status_ok, nvim_treesitter = pcall(require, "nvim-treesitter")
 if not status_ok then
+    print("not found treesiter")
     return
 end
 
