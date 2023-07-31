@@ -1,3 +1,7 @@
+local status_ok, gitsigns = pcall(require, "hop")
+if not status_ok then
+	return
+end
 -- place this in one of your configuration file(s)
 local hop = require('hop')
 local directions = require('hop.hint').HintDirection

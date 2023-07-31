@@ -1,4 +1,9 @@
 -- Lua
+local status_ok, gitsigns = pcall(require, "lsp-colors")
+if not status_ok then
+	return
+end
+
 require("lsp-colors").setup({
   Error = "#db4b4b",
   Warning = "#e0af68",

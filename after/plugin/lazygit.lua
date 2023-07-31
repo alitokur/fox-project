@@ -1,2 +1,6 @@
 -- setup mapping to call :LazyGit
-vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>")
+-- local status_ok, gitsigns = pcall(require, "LazyGit")
+-- if not status_ok then
+-- 	return
+-- end
+-- vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>")

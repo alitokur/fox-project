@@ -1,3 +1,8 @@
+local status_ok, gitsigns = pcall(require, "toggleterm")
+if not status_ok then
+    return
+end
+
 require("toggleterm").setup( {
     -- size can be a number or function which is passed the current terminal
     size = 30,

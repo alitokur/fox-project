@@ -1,3 +1,8 @@
+local status_ok, gitsigns = pcall(require, "telescope")
+if not status_ok then
+    return
+end
+
 local builtin = require('telescope.builtin')
 --find files under your current wokring directory
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})

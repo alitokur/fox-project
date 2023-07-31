@@ -1,3 +1,8 @@
+local status_ok, gitsigns = pcall(require, "trouble")
+if not status_ok then
+    return
+end
+
 local actions = require("telescope.actions")
 local trouble = require("trouble.providers.telescope")
 
