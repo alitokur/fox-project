@@ -3,7 +3,7 @@ if not status_ok then
     return
 end
 
-require('lualine').setup {
+lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'auto',

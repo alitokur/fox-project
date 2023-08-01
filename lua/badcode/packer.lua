@@ -39,7 +39,7 @@ return packer.startup(function(use)
     use({
         "neanias/everforest-nvim",
         -- Optional; default configuration will be used if setup isn't called.
-    }) 
+    })
     --treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
