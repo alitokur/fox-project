@@ -1,3 +1,8 @@
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+    return
+end
+
 local builtin = require('telescope.builtin')
 --find files under your current wokring directory
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
@@ -12,3 +17,25 @@ vim.keymap.set('n', '<leader>ps', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 
+require('telescope').setup{
+  defaults = {
+    -- ...
+  },
+  pickers = {
+    find_files = {
+      theme = "dropdown",
+    },
+    grep_string = {
+      theme = "dropdown",
+    },
+    lsp_definitions = {
+        theme = "dropdown"
+    },
+    lsp_references = {
+        theme = "dropdown"
+    },
+  },
+  extensions = {
+    -- ...
+  }
+}

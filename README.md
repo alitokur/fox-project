@@ -1,13 +1,21 @@
 <div align="center">
 
-# neocpp
+<h1> fox-project </h1>
 
-<img src="https://img.shields.io/github/last-commit/alitokur/neocpp?color=yellow&display_timestamp=committer" alt="LastCommit"> <img src="https://img.shields.io/badge/nvim-v0.9-blueviolet" alt="Neovim"> <img src="https://img.shields.io/github/contributors/alitokur/neocpp?color=red" alt="Contributors">
+![Work In Progress](https://img.shields.io/badge/-WORK%20IN%20PROGRESS-orange)
+<img src="https://img.shields.io/github/last-commit/alitokur/neocpp?color=yellow&display_timestamp=committer" alt="LastCommit"> 
+<img src="https://img.shields.io/github/downloads/alitokur/fox-project/v1.0.0/total?logo=github&label=release&color=purple" alt="Release">
+<img src="https://img.shields.io/github/contributors/alitokur/neocpp?color=red" alt="Contributors"><br>
+<img src="https://img.shields.io/badge/Linux-yellow?logo=Linux&logoColor=white" alt="Linux">
+<img src="https://img.shields.io/badge/macOS-black?logo=Apple&logoColor=white" alt="macOS"><br>
+<img src="https://img.shields.io/badge/NEOVIM-Green?logo=Neovim&logoColor=white" alt="Neovim">
 
-`Neocpp` is a config file for c++ developers. It uses Lua API to be able to build the configuration.
 
- Inspired by our ancient leader [ThePrimeagen](https://github.com/ThePrimeagen), you can find the original
-configs [here](https://github.com/ThePrimeagen/init.lua).
+<h5> `Fox Project` is a config file for the all developers. It uses Lua API 
+to be able to build the configuration. <h5>
+
+<h6> Inspired by our ancient leader <a href="https://github.com/ThePrimeagen">ThePrimeagen</a> , you can find the original
+configs <a href="https://github.com/ThePrimeagen/init.lua">here</a> </h6>
 
 <img src="img/Animation.gif" alt="NeocppGIFDemo">
 
@@ -25,14 +33,22 @@ Contents
 
 ## Why :fox_face:
 
-Why not? I know, there is a number of options but i think using vim is a skill, is not just about code fast, it's about that powerful feeling you get when using it, controlling huge or tiny code bases within your terminal with not a second of stuttering anywhere... So that is why I decided to learn a time ago. It also allows me to customize everything and I can build something exactly the way I want it. The next question is, Why Neovim?
+Why not? I know, there are numerous options available, but i firmly believe that using Vim 
+is more that just coding fast- it's a skill. There's a powerful feeling that comes with using Vim, 
+effortlessly controlling vast or compact code bases within your terminal without any stuttering.
+That's precisely why I decided to learn it some time ago. 
+The next question is, Why Neovim?
 
-- Community Supported Codebase (i know its buggy but it means new features always)
-- Lua Support
-- Core sides are still single threads like Vim but support asynchronous plugins
-- Treesitter - Builtin LSP
+- Community-supported codebase. While it may have some occasional bugs, this 
+support means that new features are consistently being introduced, keeping it 
+up to date and relevant. 
+- Lua support as its scripting language, which provides enhanced flexibility and 
+expressiveness for configuring and extending the editor. 
+- Supporting asynchronous plugins.
+- Native support for the Language Server Protocol (LSP) 
 
 ## Requirements :wolf:
+
 `Neovim:`
 ```sh
 add-apt-repository ppa:neovim-ppa/unstable
