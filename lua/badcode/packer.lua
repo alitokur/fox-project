@@ -73,6 +73,7 @@ return packer.startup(function(use)
         {'hrsh7th/nvim-cmp'},     -- Required
         {'hrsh7th/cmp-nvim-lsp'}, -- Required
         {'L3MON4D3/LuaSnip'},     -- Required
+        {'hrsh7th/cmp-path'},
         {"rafamadriz/friendly-snippets"},
         {"saadparwaiz1/cmp_luasnip"},
         {"hrsh7th/cmp-buffer"},
@@ -139,11 +140,6 @@ use {
 use {"ecthelionvi/NeoColumn.nvim"}
 
 use {
-    'phaazon/hop.nvim',
-    branch = 'v2', -- optional but strongly recommended
-}
-
-use {
     'norcalli/nvim-colorizer.lua'
 }
 
@@ -164,7 +160,7 @@ use {
     end
 }
 
--- nvim v0.7.2
+-- lazygit 
 use({
     "kdheepak/lazygit.nvim",
     -- optional for floating window border decoration
@@ -172,6 +168,10 @@ use({
         "nvim-lua/plenary.nvim",
     },
 })
+
+-- search
+use {'kevinhwang91/nvim-hlslens'}
+
 
 if packer_bootstrap then
     require('packer').sync()
