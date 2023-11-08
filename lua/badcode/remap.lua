@@ -41,4 +41,7 @@ vim.keymap.set("n", "<A-s>", ":resize -2<CR>")
 vim.keymap.set("n", "<leader>th", "<C-w>t<C-w>H")
 vim.keymap.set("n", "<leader>tk", "<C-w>t<C-w>K")
 
+--search
 
+-- Cancel search highlighting with ESC
+vim.keymap.set("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>")
