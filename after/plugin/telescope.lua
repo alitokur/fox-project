@@ -12,6 +12,7 @@ vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
 vim.keymap.set('n', '<leader>lg', builtin.live_grep, {})
 --find the string under your cursor
 vim.keymap.set('n', '<leader>gs', builtin.grep_string, {})
+vim.keymap.set('n', '<leader>gs', builtin.grep_string, {})
 --search it with command
 vim.keymap.set('n', '<leader>ps', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") })
@@ -24,6 +25,9 @@ require('telescope').setup{
   pickers = {
     find_files = {
       theme = "dropdown",
+      layout_config = {
+          width = 0.8,
+      },
     },
     grep_string = {
       theme = "dropdown",
