@@ -35,11 +35,12 @@ return packer.startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     -- theme
-    -- use ({ 'sainnhe/everforest' })
-    use({
-        "neanias/everforest-nvim",
-        -- Optional; default configuration will be used if setup isn't called.
-    })
+    -- -- use ({ 'sainnhe/everforest' })
+    -- use({
+    --     "neanias/everforest-nvim",
+    --     -- Optional; default configuration will be used if setup isn't called.
+    -- })
+    use { "catppuccin/nvim", as = "catppuccin" }
     --treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
