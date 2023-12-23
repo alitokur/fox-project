@@ -2,14 +2,6 @@ local status_ok, colors = pcall(require, "catppuccin")
 if not status_ok then
 	return
 end
--- require("everforest").load()
--- -- vim.cmd [[set background=dark]]
--- -- vim.cmd [[set termguicolors]]
--- -- vim.cmd[[let g:everforest_background = 'hard']]
--- -- vim.cmd[[let g:everforest_better_performance = 1]]
--- -- vim.cmd[[let g:everforest_ui_contrast = 'high']]
--- -- vim.cmd [[colorscheme everforest]]
-
 
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -30,9 +22,9 @@ require("catppuccin").setup({
     no_underline = false, -- Force no underline
     styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
         comments = { "italic" }, -- Change the style of comments
-        conditionals = { "italic" },
+        conditionals = {},
         loops = {},
-        functions = {},
+        functions = {"bold"},
         keywords = {},
         strings = {},
         variables = {},
@@ -47,18 +39,18 @@ require("catppuccin").setup({
         mocha = {
           rosewater = "#ffd7d9",
           flamingo = "#ffb3b8",
-          pink = "#ff7eb6",
+          pink = "#FF6D60",
           mauve = "#d4bbff",
           red = "#fa4d56",
           maroon = "#ff8389",
-          peach = "#ff832b",
+          peach = "#FFA33C",
           yellow = "#fddc69",
-          green = "#42be65",
+          green = "#9ADE7B",
           teal = "#3ddbd9",
           sky = "#82cfff",
           sapphire = "#78a9ff",
-          blue = "#4589ff",
-          lavender = "#be95ff",
+          blue = "#fa4d56",
+          lavender = "#BC7AF9",
           text = "#f4f4f4",
           subtext1 = "#e0e0e0",
           subtext0 = "#c6c6c6",
@@ -79,7 +71,7 @@ require("catppuccin").setup({
           pink = "#ff7eb6",
           red = "#fa4d56",
           maroon = "#ff8389",
-          peach = "#ff832b",
+          peach = "#EC8F5E",
           yellow = "#fddc69",
           green = "#42be65",
           teal = "#3ddbd9",
