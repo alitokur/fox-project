@@ -173,6 +173,12 @@ use({
 -- search
 use {'kevinhwang91/nvim-hlslens'}
 
+use {
+'tomasky/bookmarks.nvim',
+-- tag = 'release' -- To use the latest release
+}
+
+use { 'axkirillov/hbac.nvim' }
 
 if packer_bootstrap then
     require('packer').sync()
