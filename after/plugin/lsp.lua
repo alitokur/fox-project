@@ -41,7 +41,7 @@ lsp.ensure_installed({
     "lemminx",
     "ltex",
     "jsonls",
-    "docker_compose_language_service",
+    "yamlls",
 })
 
 lsp.set_sign_icons({

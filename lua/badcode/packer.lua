@@ -180,6 +180,8 @@ use {
 
 use { 'axkirillov/hbac.nvim' }
 
+use 'mfussenegger/nvim-lint'
+
 if packer_bootstrap then
     require('packer').sync()
 end
