@@ -180,7 +180,10 @@ use {
 
 use { 'axkirillov/hbac.nvim' }
 
+
 use 'mfussenegger/nvim-lint'
+
+use { 'christoomey/vim-tmux-navigator' }
 
 if packer_bootstrap then
     require('packer').sync()
