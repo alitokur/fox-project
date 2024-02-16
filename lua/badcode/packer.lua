@@ -185,6 +185,10 @@ use 'mfussenegger/nvim-lint'
 
 use { 'christoomey/vim-tmux-navigator' }
 
+use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
 if packer_bootstrap then
     require('packer').sync()
 end
