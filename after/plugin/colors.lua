@@ -135,6 +135,7 @@ require("catppuccin").setup({
         harpoon = true,
         dap = true,
         dap_ui = true,
+        navic = true,
         indent_blankline = {
             enabled = true,
             scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text

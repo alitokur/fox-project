@@ -189,6 +189,19 @@ use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
 use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
+-- use { "lukas-reineke/headlines.nvim"}
+ use {
+        "lukas-reineke/headlines.nvim",
+    }
+
+-- auto pair plugin
+--add aerial.nvim
+-- add neotest
+-- treesiter context
+-- add nvim.ufo
+-- add octo.nvim 
+-- add vim-illuminate
+
 if packer_bootstrap then
     require('packer').sync()
 end
