@@ -126,15 +126,28 @@ require("catppuccin").setup({
 },
     custom_highlights = {},
     integrations = {
+        mason = false,
         cmp = true,
         gitsigns = true,
         nvimtree = true,
         treesitter = true,
-        notify = false,
-        mini = {
+        barbar = true,
+        harpoon = true,
+        dap = true,
+        dap_ui = true,
+        indent_blankline = {
             enabled = true,
-            indentscope_color = "",
+            scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
+            colored_indent_levels = true,
         },
+
+        telescope = {
+            enabled = true,
+            -- style = "nvchad"
+        },
+
+        lsp_trouble = false,
+
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
 })
