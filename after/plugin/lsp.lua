@@ -21,6 +21,7 @@ lsp.on_attach(function(client, bufnr)
     -- to learn the available actions
     lsp.default_keymaps({buffer = bufnr})
 
+    client.server_capabilities.semanticTokensProvider = nil
     -- Neovim LSP Pickers
     -- https://github.com/nvim-telescope/telescope.nvim#neovim-lsp-pickers
     vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = true})
