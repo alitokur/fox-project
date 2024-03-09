@@ -195,7 +195,6 @@ use {
   requires = {
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope.nvim',
-    -- OR 'ibhagwan/fzf-lua',
     'nvim-tree/nvim-web-devicons',
   },
   config = function ()
@@ -206,6 +205,8 @@ use {
  use {
         "lukas-reineke/headlines.nvim",
     }
+
+ use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
 -- auto pair plugin
 --add aerial.nvim
