@@ -88,8 +88,7 @@ use {
     'nvim-tree/nvim-tree.lua',
     requires = {
         'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
 }
 --airline
 use {
@@ -104,17 +103,11 @@ use {
     end
 }
 --gitsigns.nvim
-use {
-    'lewis6991/gitsigns.nvim',
-}
+use { 'lewis6991/gitsigns.nvim' }
 --toggleterm
-use {
-    "akinsho/toggleterm.nvim", tag = '*',
-}
+use {"akinsho/toggleterm.nvim", tag = '*', }
 --symbols-outline
-use {
-    "simrat39/symbols-outline.nvim"
-}
+use { "simrat39/symbols-outline.nvim" }
 --barbar
 use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 --barbecue
@@ -138,30 +131,19 @@ use {
         require"startup".setup()
     end
 }
-use {"ecthelionvi/NeoColumn.nvim"}
-
-use {
-    'norcalli/nvim-colorizer.lua'
-}
-
-use {
-    'folke/todo-comments.nvim'
-}
-
+use { 'ecthelionvi/NeoColumn.nvim' }
+use { 'norcalli/nvim-colorizer.lua' }
+use { 'folke/todo-comments.nvim'}
 use{
     "folke/trouble.nvim"
 }
-
 use 'folke/lsp-colors.nvim'
-
 use {
     'rmagatti/goto-preview',
     config = function()
         require('goto-preview').setup {}
     end
 }
-
--- lazygit 
 use({
     "kdheepak/lazygit.nvim",
     -- optional for floating window border decoration
@@ -169,55 +151,39 @@ use({
         "nvim-lua/plenary.nvim",
     },
 })
-
 -- search
 use {'kevinhwang91/nvim-hlslens'}
-
-use {
-'tomasky/bookmarks.nvim',
--- tag = 'release' -- To use the latest release
-}
-
+use { 'tomasky/bookmarks.nvim' }
 use { 'axkirillov/hbac.nvim' }
-
-
-use 'mfussenegger/nvim-lint'
-
+use { 'mfussenegger/nvim-lint' }
 use { 'christoomey/vim-tmux-navigator' }
-
 use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-
-use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
-
-
 use {
-  'pwntester/octo.nvim',
-  requires = {
-    'nvim-lua/plenary.nvim',
-    'nvim-telescope/telescope.nvim',
-    'nvim-tree/nvim-web-devicons',
-  },
-  config = function ()
-    require"octo".setup()
-  end
+    'pwntester/octo.nvim',
+    requires = {
+        'nvim-lua/plenary.nvim',
+        'nvim-telescope/telescope.nvim',
+        'nvim-tree/nvim-web-devicons',
+    },
+    config = function ()
+        require"octo".setup()
+    end
 }
--- use { "lukas-reineke/headlines.nvim"}
- use {
-        "lukas-reineke/headlines.nvim",
+use { 'lukas-reineke/headlines.nvim' }
+use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+use { 'VonHeikemen/fine-cmdline.nvim', requires = {
+        {'MunifTanjim/nui.nvim'}
     }
-
- use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
-
--- auto pair plugin
---add aerial.nvim
--- add neotest
--- treesiter context
--- add nvim.ufo
--- add octo.nvim 
--- add vim-illuminate
+}
 
 if packer_bootstrap then
     require('packer').sync()
 end
 
 end)
+
+-- auto pair plugin
+-- add aerial.nvim
+-- add neotest
+-- treesiter context
+-- add vim-illuminate
