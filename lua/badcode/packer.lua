@@ -108,6 +108,11 @@ use { 'lewis6991/gitsigns.nvim' }
 use {"akinsho/toggleterm.nvim", tag = '*', }
 --symbols-outline
 use { "simrat39/symbols-outline.nvim" }
+
+  use{
+    "stevearc/aerial.nvim",
+  }
+
 --barbar
 use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 --barbecue
@@ -174,6 +179,8 @@ use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 use { 'VonHeikemen/fine-cmdline.nvim', requires = {
         {'MunifTanjim/nui.nvim'}
     }
+
+
 }
 
 if packer_bootstrap then
