@@ -162,7 +162,7 @@ use { 'tomasky/bookmarks.nvim' }
 use { 'axkirillov/hbac.nvim' }
 use { 'mfussenegger/nvim-lint' }
 use { 'christoomey/vim-tmux-navigator' }
-use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 use {
     'pwntester/octo.nvim',
     requires = {
