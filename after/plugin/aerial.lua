@@ -110,7 +110,7 @@ require("aerial").setup({
   },
 
   -- Highlight the symbol in the source buffer when cursor is in the aerial win
-  highlight_on_hover = false,
+  highlight_on_hover = true,
 
   -- When jumping to a symbol, highlight the line for this many ms.
   -- Set to false to disable
@@ -184,7 +184,7 @@ require("aerial").setup({
 
   -- Automatically open aerial when entering supported buffers.
   -- This can be a function (see :help aerial-open-automatic)
-  open_automatic = true,
+  open_automatic = false,
 
   -- Run this command after jumping to a symbol (false will disable)
   post_jump_cmd = "normal! zz",
