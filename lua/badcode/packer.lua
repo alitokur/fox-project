@@ -182,6 +182,7 @@ use { 'VonHeikemen/fine-cmdline.nvim', requires = {
 
 
 }
+use {"github/copilot.vim"}
 
 if packer_bootstrap then
     require('packer').sync()
