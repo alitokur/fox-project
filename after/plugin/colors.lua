@@ -25,13 +25,13 @@ require("catppuccin").setup({
         conditionals = {},
         loops = {},
         functions = {"bold"},
-        keywords = {},
-        strings = {},
+        keywords = {"bold"},
+        strings = {"italic"},
         variables = {},
         numbers = {},
         booleans = {},
         properties = {},
-        types = {},
+        types = {"bold"},
         operators = {},
     },
      color_overrides = {
@@ -49,7 +49,7 @@ require("catppuccin").setup({
           teal = "#3ddbd9",
           sky = "#82cfff",
           sapphire = "#78a9ff",
-          blue = "#fa4d56",
+          blue = "#C6EBC5",
           lavender = "#BC7AF9",
           text = "#f4f4f4",
           subtext1 = "#e0e0e0",
@@ -136,6 +136,14 @@ require("catppuccin").setup({
         dap = true,
         dap_ui = true,
         navic = true,
+        octo = false,
+        ufo = true,
+        require('lualine').setup {
+            options = {
+                theme = "catppuccin"
+                -- ... the rest of your lualine config
+            }
+        },
         indent_blankline = {
             enabled = true,
             scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
