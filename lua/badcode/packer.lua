@@ -90,11 +90,13 @@ use {
         'nvim-tree/nvim-web-devicons', -- optional, for file icons
     }
 }
+
 --airline
 use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
+
 --comment
 use {
     'numToStr/Comment.nvim',
@@ -102,19 +104,15 @@ use {
         require('Comment').setup()
     end
 }
+
 --gitsigns.nvim
 use { 'lewis6991/gitsigns.nvim' }
---toggleterm
-use {"akinsho/toggleterm.nvim", tag = '*', }
+
 --symbols-outline
 use { "simrat39/symbols-outline.nvim" }
 
-  use{
-    "stevearc/aerial.nvim",
-  }
+use{"stevearc/aerial.nvim"}
 
---barbar
-use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 --barbecue
 use({
     "utilyre/barbecue.nvim",
@@ -157,12 +155,18 @@ use({
     },
 })
 -- search
-use {'kevinhwang91/nvim-hlslens'}
-use { 'tomasky/bookmarks.nvim' }
-use { 'axkirillov/hbac.nvim' }
-use { 'mfussenegger/nvim-lint' }
-use { 'christoomey/vim-tmux-navigator' }
+use { "kevinhwang91/nvim-hlslens"}
+
+use { "tomasky/bookmarks.nvim" }
+
+use { "axkirillov/hbac.nvim" }
+
+use { "mfussenegger/nvim-lint" }
+
+use { "christoomey/vim-tmux-navigator" }
+
 use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+
 use {
     'pwntester/octo.nvim',
     requires = {
@@ -174,29 +178,32 @@ use {
         require"octo".setup()
     end
 }
-use { 'lukas-reineke/headlines.nvim' }
-use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
-use { 'VonHeikemen/fine-cmdline.nvim', requires = {
-        {'MunifTanjim/nui.nvim'}
-    }
-
-
-}
-use {"github/copilot.vim"}
-
-use { 'RRethy/vim-illuminate' }
 
 use {
     'rmagatti/auto-session',
     config = function()
         require("auto-session").setup {
             log_level = "error",
-            auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+            auto_session_suppress_dirs = { "~/", "~/projects", "/" },
         }
     end
 }
 
-use {'nvim-telescope/telescope-ui-select.nvim' }
+use { "lukas-reineke/headlines.nvim" }
+
+use { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" }
+
+use { "VonHeikemen/fine-cmdline.nvim", requires = "MunifTanjim/nui.nvim" }
+
+use { "github/copilot.vim" }
+
+use { "RRethy/vim-illuminate" }
+
+use { "nvim-telescope/telescope-ui-select.nvim" }
+
+use { "folke/zen-mode.nvim" }
+
+use { "folke/twilight.nvim" }
 
 if packer_bootstrap then
     require('packer').sync()

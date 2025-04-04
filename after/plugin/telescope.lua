@@ -23,12 +23,12 @@ require('telescope').setup{
     -- ...
   },
   pickers = {
-    find_files = {
-      theme = "dropdown",
-      layout_config = {
-          width = 0.8,
-      },
-    },
+    -- find_files = {
+    --   theme = "horizontal",
+    --   layout_config = {
+    --       width = 0.8,
+    --   },
+    -- },
     grep_string = {
       theme = "dropdown",
     },

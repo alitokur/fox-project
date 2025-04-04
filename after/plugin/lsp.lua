@@ -22,6 +22,7 @@ lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps({buffer = bufnr})
 
     client.server_capabilities.semanticTokensProvider = nil
+    client.server_capabilities.offsetEncoding = {'utf-16'}
     -- Neovim LSP Pickers
     -- https://github.com/nvim-telescope/telescope.nvim#neovim-lsp-pickers
     vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = true})
@@ -53,6 +54,7 @@ lsp.set_sign_icons({
       other = "",
 
 })
+
 
 --formatter
 --cf is using 2 space as a tab :(
