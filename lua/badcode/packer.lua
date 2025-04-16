@@ -113,18 +113,18 @@ use { "simrat39/symbols-outline.nvim" }
 
 use{"stevearc/aerial.nvim"}
 
---barbecue
-use({
-    "utilyre/barbecue.nvim",
-    tag = "*",
-    requires = {
-        "SmiteshP/nvim-navic",
-    },
-    after = "nvim-web-devicons", -- keep this if you're using NvChad
-    config = function()
-        require("barbecue").setup()
-    end,
-})
+-- --barbecue
+-- use({
+--     "utilyre/barbecue.nvim",
+--     tag = "*",
+--     requires = {
+--         "SmiteshP/nvim-navic",
+--     },
+--     after = "nvim-web-devicons", -- keep this if you're using NvChad
+--     config = function()
+--         require("barbecue").setup()
+--     end,
+-- })
 --scroolbar
 use("petertriho/nvim-scrollbar")
 use {
@@ -197,13 +197,20 @@ use { "VonHeikemen/fine-cmdline.nvim", requires = "MunifTanjim/nui.nvim" }
 
 use { "github/copilot.vim" }
 
-use { "RRethy/vim-illuminate" }
+-- use { "RRethy/vim-illuminate" }
 
 use { "nvim-telescope/telescope-ui-select.nvim" }
 
 use { "folke/zen-mode.nvim" }
 
 use { "folke/twilight.nvim" }
+
+use { "folke/snacks.nvim" }
+
+-- themes
+
+use { "sainnhe/sonokai" }
+
 
 if packer_bootstrap then
     require('packer').sync()

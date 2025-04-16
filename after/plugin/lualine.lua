@@ -26,7 +26,7 @@ lualine.setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_x = {'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
@@ -42,4 +42,15 @@ lualine.setup {
   winbar = {},
   inactive_winbar = {},
   extensions = {}
+}
+
+local custom_gruvbox = require'lualine.themes.dracula'
+
+custom_gruvbox.normal.c.bg = '#161616'
+custom_gruvbox.insert.c.bg = '#161616'
+custom_gruvbox.command.c.bg = '#161616'
+custom_gruvbox.visual.c.bg = '#161616'
+
+require('lualine').setup {
+  options = { theme  = custom_gruvbox },
 }

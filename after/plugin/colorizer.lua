@@ -4,4 +4,4 @@ if not status_ok then
 end
 
 
-require 'colorizer'.setup()
+-- require 'colorizer'.setup()

@@ -1,0 +1,2 @@
+-- gcc
+-- vim.cmd.colorscheme('sonokai')
