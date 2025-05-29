@@ -63,13 +63,10 @@ return packer.startup(function(use)
         requires = {
             -- LSP Support
             {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
-            'williamboman/mason.nvim',
-            run = function()
-                pcall(vim.api.nvim_command, 'MasonUpdate')
-            end,
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            {                          -- Optional
+                'mason-org/mason.nvim'
+            },
+        {'mason-org/mason-lspconfig.nvim'}, -- Optional
         -- Autocompletion
         {'hrsh7th/nvim-cmp'},     -- Required
         {'hrsh7th/cmp-nvim-lsp'}, -- Required
@@ -193,7 +190,7 @@ use { "lukas-reineke/headlines.nvim" }
 
 use { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" }
 
-use { "VonHeikemen/fine-cmdline.nvim", requires = "MunifTanjim/nui.nvim" }
+-- use { "VonHeikemen/fine-cmdline.nvim", requires = "MunifTanjim/nui.nvim" }
 
 use { "github/copilot.vim" }
 
@@ -205,7 +202,39 @@ use { "folke/zen-mode.nvim" }
 
 use { "folke/twilight.nvim" }
 
-use { "folke/snacks.nvim" }
+use({
+  "folke/snacks.nvim",
+  config = function()
+    require("snacks").setup({
+      -- Optional: enable/disable modules
+      notifier = {
+        enabled = true,
+        style = "compact",  -- "compact", "minimal", or "fancy"
+        timeout = 2000,
+      },
+      words = {enabled = true},
+      statuscolumn = {enabled = true},
+      scroll = {enabled = true},
+      -- dashboard = {enabled = true},
+    })
+  end,
+  priority = 1000,
+  lazy = false,
+})
+
+
+use({
+  "folke/noice.nvim",
+  event = "VimEnter",
+  config = function()
+    require("noice").setup()
+  end,
+  requires = {
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+    }
+})
+
 
 -- themes
 

@@ -45,3 +45,7 @@ vim.keymap.set("n", "<leader>tk", "<C-w>t<C-w>K")
 
 -- Cancel search highlighting with ESC
 vim.keymap.set("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>")
+
+
+--command mode with ENTER
+vim.keymap.set("n", "<CR>", ":")

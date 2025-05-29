@@ -3,47 +3,59 @@ if not status_ok then
     return
 end
 
-lualine.setup {
-  options = {
-    icons_enabled = true,
-    -- theme = 'auto',
-    --component_separators = { left = '', right = ''},
-    --section_separators = { left = '', right = ''},
-    disabled_filetypes = {
-      statusline = {},
-      winbar = {},
-    },
-    ignore_focus = {},
-    always_divide_middle = true,
-    globalstatus = false,
-    refresh = {
-      statusline = 1000,
-      tabline = 1000,
-      winbar = 1000,
-    }
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {},
-  winbar = {},
-  inactive_winbar = {},
-  extensions = {}
-}
+-- https://github.com/Shock9616/nvim-config/blob/main/lua/shock/plugins/lualine.lua
 
+require("lualine").setup({
+    options = {
+        component_separators = "",
+        section_separators = { left = "", right = "" },
+        disabled_filetypes = { "alpha", "Outline" },
+    },
+    sections = {
+        lualine_a = {
+            { "mode", separator = { left = " ", right = "" }, icon = "" },
+        },
+        lualine_b = {
+            {
+                "filetype",
+                icon_only = true,
+                padding = { left = 1, right = 0 },
+            },
+            "filename",
+        },
+        lualine_c = {
+            {
+                "branch",
+                icon = "",
+            },
+            {
+                "diff",
+                symbols = { added = " ", modified = " ", removed = " " },
+                colored = false,
+            },
+        },
+        lualine_x = {
+            {
+                "diagnostics",
+                symbols = { error = " ", warn = " ", info = " ", hint = " " },
+                update_in_insert = true,
+            },
+        },
+        lualine_y = { clients_lsp },
+        lualine_z = {
+            { "location", separator = { left = "", right = " " }, icon = "" },
+        },
+    },
+    inactive_sections = {
+        lualine_a = { "filename" },
+        lualine_b = {},
+        lualine_c = {},
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = { "location" },
+    },
+    extensions = { "toggleterm", "trouble" },
+})
 local custom_gruvbox = require'lualine.themes.dracula'
 
 custom_gruvbox.normal.c.bg = '#161616'

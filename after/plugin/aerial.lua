@@ -20,7 +20,7 @@ require("aerial").setup({
     -- options will open the window in the other direction *if* there is a
     -- different buffer in the way of the preferred direction
     -- Enum: prefer_right, prefer_left, right, left, float
-    default_direction = "prefer_right",
+    default_direction = "prefer_left",
 
     -- Determines where the aerial window will be opened
     --   edge   - open aerial at the far right/left of the editor
@@ -117,7 +117,7 @@ require("aerial").setup({
   highlight_on_jump = 300,
 
   -- Jump to symbol in source window when the cursor moves
-  autojump = false,
+  autojump = true,
 
   -- Define symbol icons. You can also specify "<Symbol>Collapsed" to change the
   -- icon when the tree is collapsed at that symbol, or "Collapsed" to specify a
@@ -184,7 +184,7 @@ require("aerial").setup({
 
   -- Automatically open aerial when entering supported buffers.
   -- This can be a function (see :help aerial-open-automatic)
-  open_automatic = false,
+  open_automatic = true,
 
   -- Run this command after jumping to a symbol (false will disable)
   post_jump_cmd = "normal! zz",
@@ -341,3 +341,5 @@ require("aerial").setup({
 })
 
 vim.keymap.set("n", "<leader>q", "<cmd>AerialToggle!<CR>")
+
+
