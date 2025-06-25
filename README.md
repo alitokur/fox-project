@@ -123,56 +123,9 @@ To update all plugins, you can run the following command within Neovim:
 | Parser             | Language parsers                                        | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)|
 | Auto-Completion    | Autocompletion - Language servers                       | [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)      |
 | Undo History       | To visualize undo history                               | [mbbill/undotree](https://github.com/mbbill/undotree)              |
-| Commenting         | Commenting plugin                                       | [comment.nvim](https://github.com/numToStr/Comment.nvim)           |
 | Statusline         | Neovim statusline                                       | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)       |
-| File Explorer      | File Explorer For Neovim Written In Lua                 | [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)        |
 | Blankline          | Indentation guides to all lines                         | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)      |
 
 
-## Keymaps :chipmunk:
-
-| Command                            | Keymap                                 | Description                         |
-| ---------------------------------  | -------------------------------------- | ------------------------------------|
-| splits                             | Alt + h                                | Create horizantal split             |
-| splits                             | Alt + h                                | Create vertical split               |
-| splits                             | Ctrl + h                               | Move left                           |
-| splits                             | Ctrl + j                               | Move right                          |
-| splits                             | Ctrl + k                               | Move up                             |
-| splits                             | Ctrl + l                               | Move down                           |
-| splits                             | Ctrl + h                               | Move left                           |
-| splits                             | Alt + d                                | Vertical resize +3                  |
-| splits                             | Alt + a                                | Vertical resize -3                  |
-| splits                             | Alt + w                                | Horizantal resize +3                |
-| splits                             | Alt + s                                | Horizaton resize  -3                |
-| splits                             | Space + th                             | Make vertical split to horizantal   |
-| splits                             | Space + tk                             | Make horizantal split to vertical   |
-| movement                           | J                                      | Move selected blocks to up          |
-| movement                           | K                                      | Move selected blocks to down        |
-| movement                           | Ctrl + d                               | Half page jumping down              |
-| movement                           | Ctrl + u                               | Half page jumping up                |
-| copy-paste                         | Space + p                              | Paste but keep buffer               |
-| comment - (normal)                 | gcc                                    | linewise comment toggle             |
-| comment - (normal)                 | gbc                                    | blockwise comment toggle            | 
-| comment - (visual)                 | gc                                     | Linewise comment toggle             |
-| comment - (visual)                 | gb                                     | Blockwise comment toggle            |
-| telescope - (normal)               | Space + ff                             | Find files                          |
-| telescope - (normal)               | Space + fg                             | Find in git files                   |
-| telescope - (normal)               | Space + lg                             | Live grep                           |
-| telescope - (normal)               | Space + gs                             | Grep string                         |
-| telescope - (normal)               | Space + ps                             | Grep with command                   |
-| harpoon - (normal)                 | Space + a                              | Add to harpoon list                 |
-| harpoon - (normal)                 | Ctrl +  e                              | Open harpoon list                   |
-| harpoon - (normal)                 | Space + 1  (or 2,3,4)                  | Jump the seletected buffer          |
-| nvim-tree - (normal)               | Space + pv                             | Toggle nvim-tree                    |
-| undotree - (normal)                | Space + u                              | Toggle undotree                     |
-| treesitter - (normal)              | grr                                    | Smart rename                        |
-| lsp-zero   - (normal)              | gd                                     | Find definition                     |
-| lsp-zero   - (normal)              | K                                      | Display information                 |
-| nvim-tree  - (map)                 | Ctrl + v                               | Vertical split                      |
-| lsp-zero   - (map)                 | Ctrl + x                               | Horizantal split                    |
-
-## Want to contribute? :tiger:
-If you'd like to contribute to fox-project, feel free to fork the repository, 
-make your changes, and submit a pull request.
 
 
