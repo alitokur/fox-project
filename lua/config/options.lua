@@ -39,4 +39,5 @@ opt.swapfile = false
 opt.undofile = true
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
-
+--cursorline
+opt.cursorline = false -- highlight the current line

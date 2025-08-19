@@ -11,11 +11,10 @@
 <img src="https://img.shields.io/badge/NEOVIM-Green?logo=Neovim&logoColor=white" alt="Neovim">
 
 
-<h5> `Fox Project` is a config file for the all developers. It uses Lua API 
-to be able to build the configuration. <h5>
+<h5> `Fox Project` is a config file for the c++ developers. 
 
 <h6> Inspired by our ancient leader <a href="https://github.com/ThePrimeagen">ThePrimeagen</a> , you can find the original
-configs <a href="https://github.com/ThePrimeagen/init.lua">here</a> </h6>
+configs <a href="https://github.com/ThePrimeagen/init.lua">here</a>. </h6>
 
 <img src="img/Animation.gif" alt="NeocppGIFDemo">
 
