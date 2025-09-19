@@ -41,3 +41,7 @@ opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 --cursorline
 opt.cursorline = false -- highlight the current line
+
+--search
+-- remove highlight after searching
+opt.hlsearch = false
