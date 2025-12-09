@@ -15,16 +15,60 @@ return {
     },
     picker = { enabled = true },
     quickfile = { enabled = true },
-    scope = { enabled = true },
-    scroll = { enabled = true },
-    statuscolumn = { enabled = true },
-    words = { enabled = true },
-    styles = {
-      notification = {
-        -- wo = { wrap = true } -- Wrap notifications
-      }
-    }
-  },
+        scope = { enabled = true },
+        scroll = { enabled = true },
+        statuscolumn = { enabled = true },
+        words = { enabled = true },
+        
+
+        --- zen mode configuration
+        zen = {
+            win = { style = "zen" },
+            ---@type table<string, boolean>
+            toggles = {
+                dim = true,
+                diagnostics = false,
+                inlay_hints = false,
+                indent = false,
+            },
+
+            on_open = function()
+                vim.fn.jobstart({ "kitty", "@", "set-font-size", "+6" })
+            end,
+
+            on_close = function()
+                vim.fn.jobstart({ "kitty", "@", "set-font-size", "0" })
+            end,
+        },
+
+        styles = {
+            -- notification = {
+            --   -- wo = { wrap = true } -- Wrap notifications
+            -- }
+
+            zen = {
+                enter = true,
+                fixbuf = false,
+                minimal = false,
+                width = 120,
+                height = 0,
+                backdrop = { transparent = false, blend = 99 },
+                keys = { q = false },
+                zindex = 40,
+                wo = {
+                    winhighlight = "NormalFloat:Normal",
+                    number = false, -- 🔹 no absolute line numbers
+                    relativenumber = false, -- 🔹 no relative line numbers
+                    signcolumn = "no", -- 🔹 also hides gitsigns visually from this window
+                },
+                w = {
+                    snacks_main = true,
+                },
+
+            },
+
+        }
+    },
   keys = {
     -- Top Pickers & Explorer
     { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
