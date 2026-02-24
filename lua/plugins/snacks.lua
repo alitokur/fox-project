@@ -50,7 +50,7 @@ return {
                 enter = true,
                 fixbuf = false,
                 minimal = false,
-                width = 120,
+                width = 80,
                 height = 0,
                 backdrop = { transparent = false, blend = 99 },
                 keys = { q = false },

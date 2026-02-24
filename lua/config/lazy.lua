@@ -25,12 +25,13 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
     spec = {
         -- import your plugins
-        { import = "plugins" },
+        { import = "plugins", concurrency = 1 },
         { import = "plugins.lsp"},
     },
+    concurrency = 1, -- how many plugins to install at the same time (default is 4)
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
     install = { colorscheme = { "habamax" } },
     -- automatically check for plugin updates
-    checker = { enabled = true },
+  checker = { enabled = true, concurrency = 1, frequency = 2 * 86400, wait = true },
 })

@@ -1,20 +1,10 @@
 return {
-  "mason-org/mason.nvim",
-  dependencies = {
-    "mason-org/mason-lspconfig.nvim",
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-  },
-  config = function()
-    -- import mason
-    local mason = require("mason")
-
-    -- import mason-lspconfig
-    local mason_lspconfig = require("mason-lspconfig")
-
-    local mason_tool_installer = require("mason-tool-installer")
-
-    -- enable mason and configure icons
-    mason.setup({
+  {
+    "mason-org/mason.nvim",
+    cmd = "Mason",
+    build = ":MasonUpdate",
+    opts = {
+    ensure_installed = { "codelldb" },
       ui = {
         icons = {
           package_installed = "✓",
@@ -22,14 +12,27 @@ return {
           package_uninstalled = "✗",
         },
       },
-    })
+    },
+  },
 
-    mason_lspconfig.setup({
-      -- list of servers for mason to install
+  {
+    "mason-org/mason-lspconfig.nvim",
+    dependencies = { "mason-org/mason.nvim" },
+    opts = {
+      ensure_installed = { "clangd", "lua_ls", "pyright" },
+      automatic_enable = true, -- kurulan LSP’leri otomatik enable et
+    },
+  },
+
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    dependencies = { "mason-org/mason.nvim" },
+    opts = {
       ensure_installed = {
-	"clangd",
+        -- formatter/linter eklemek istersen buraya
+        -- "stylua", "shfmt", "clang-format"
       },
-    })
-
-  end,
+      run_on_start = true,
+    },
+  },
 }
