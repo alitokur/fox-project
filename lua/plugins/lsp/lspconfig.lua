@@ -17,18 +17,33 @@ return {
     config = function()
       local cmp_nvim_lsp = require("cmp_nvim_lsp")
       local keymap = vim.keymap
+      local util = require("lspconfig.util")
+
+      local border = "rounded"
+
+      vim.o.winborder = border
+      vim.o.winblend = 0
+      vim.o.pumblend = 0
 
       vim.diagnostic.config({
         underline = true,
         update_in_insert = false,
-        virtual_text = { spacing = 4, source = "if_many", prefix = "●" },
         severity_sort = true,
+        virtual_text = {
+          spacing = 4,
+          source = "if_many",
+          prefix = "●",
+        },
+        float = {
+          border = border,
+          source = "if_many",
+        },
         signs = {
           text = {
             [vim.diagnostic.severity.ERROR] = "",
-            [vim.diagnostic.severity.WARN]  = "",
-            [vim.diagnostic.severity.HINT]  = "",
-            [vim.diagnostic.severity.INFO]  = "",
+            [vim.diagnostic.severity.WARN] = "",
+            [vim.diagnostic.severity.HINT] = "",
+            [vim.diagnostic.severity.INFO] = "",
           },
         },
       })
@@ -37,36 +52,38 @@ return {
         vim.lsp.protocol.make_client_capabilities()
       )
 
-local util = require("lspconfig.util")
+      vim.lsp.config("lua_ls", {
+        capabilities = capabilities,
+        root_dir = function(fname)
+          return util.root_pattern(
+            ".luarc.json",
+            ".luarc.jsonc",
+            ".emmyrc.json",
+            ".stylua.toml",
+            "stylua.toml",
+            "selene.toml",
+            "selene.yml",
+            ".git"
+          )(fname)
+            or util.find_git_ancestor(fname)
+            or util.path.dirname(fname)
+        end,
+        settings = {
+          Lua = {
+            runtime = { version = "LuaJIT" },
+            diagnostics = { globals = { "vim" } },
+            workspace = {
+              checkThirdParty = false,
+              library = {
+                vim.env.VIMRUNTIME,
+                vim.fn.stdpath("config"),
+              },
+            },
+            telemetry = { enable = false },
+          },
+        },
+      })
 
-vim.lsp.config("lua_ls", {
-  capabilities = capabilities,
-  root_dir = function(fname)
-    return util.root_pattern(
-      ".luarc.json",
-      ".luarc.jsonc",
-      ".emmyrc.json",
-      ".stylua.toml",
-      "stylua.toml",
-      "selene.toml",
-      "selene.yml",
-      ".git"
-    )(fname)
-      or util.find_git_ancestor(fname)
-      or util.path.dirname(fname) -- fallback
-  end,
-  settings = {
-    Lua = {
-      runtime = { version = "LuaJIT" },
-      diagnostics = { globals = { "vim" } },
-      workspace = {
-        checkThirdParty = false,
-        library = { vim.env.VIMRUNTIME, vim.fn.stdpath("config") },
-      },
-      telemetry = { enable = false },
-    },
-  },
-})
       vim.lsp.config("clangd", {
         capabilities = vim.tbl_deep_extend("force", capabilities, {
           offsetEncoding = { "utf-16" },
@@ -91,29 +108,132 @@ vim.lsp.config("lua_ls", {
         group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
         callback = function(ev)
           local client = vim.lsp.get_client_by_id(ev.data.client_id)
+
           if client and client.server_capabilities then
             client.server_capabilities.semanticTokensProvider = nil
           end
 
           local opts = { buffer = ev.buf, silent = true }
 
-          keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", vim.tbl_extend("force", opts, { desc = "References" }))
-          keymap.set("n", "gD", vim.lsp.buf.declaration, vim.tbl_extend("force", opts, { desc = "Declaration" }))
-          keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", vim.tbl_extend("force", opts, { desc = "Definition" }))
-          keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", vim.tbl_extend("force", opts, { desc = "Implementation" }))
-          keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", vim.tbl_extend("force", opts, { desc = "Type Definition" }))
-          keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, { desc = "Code Action" }))
-          keymap.set("n", "<leader>rn", vim.lsp.buf.rename, vim.tbl_extend("force", opts, { desc = "Rename" }))
-          keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", vim.tbl_extend("force", opts, { desc = "Buffer Diagnostics" }))
-          keymap.set("n", "<leader>d", vim.diagnostic.open_float, vim.tbl_extend("force", opts, { desc = "Line Diagnostics" }))
-          keymap.set("n", "[d", vim.diagnostic.goto_prev, vim.tbl_extend("force", opts, { desc = "Prev Diagnostic" }))
-          keymap.set("n", "]d", vim.diagnostic.goto_next, vim.tbl_extend("force", opts, { desc = "Next Diagnostic" }))
-          keymap.set("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, { desc = "Hover" }))
-          keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", vim.tbl_extend("force", opts, { desc = "Restart LSP" }))
+          keymap.set(
+            "n",
+            "gR",
+            "<cmd>Telescope lsp_references<CR>",
+            vim.tbl_extend("force", opts, { desc = "References" })
+          )
+
+          keymap.set(
+            "n",
+            "gD",
+            vim.lsp.buf.declaration,
+            vim.tbl_extend("force", opts, { desc = "Declaration" })
+          )
+
+          keymap.set(
+            "n",
+            "gd",
+            "<cmd>Telescope lsp_definitions<CR>",
+            vim.tbl_extend("force", opts, { desc = "Definition" })
+          )
+
+          keymap.set(
+            "n",
+            "gi",
+            "<cmd>Telescope lsp_implementations<CR>",
+            vim.tbl_extend("force", opts, { desc = "Implementation" })
+          )
+
+          keymap.set(
+            "n",
+            "gt",
+            "<cmd>Telescope lsp_type_definitions<CR>",
+            vim.tbl_extend("force", opts, { desc = "Type Definition" })
+          )
+
+          keymap.set(
+            { "n", "v" },
+            "<leader>ca",
+            vim.lsp.buf.code_action,
+            vim.tbl_extend("force", opts, { desc = "Code Action" })
+          )
+
+          keymap.set(
+            "n",
+            "<leader>rn",
+            vim.lsp.buf.rename,
+            vim.tbl_extend("force", opts, { desc = "Rename" })
+          )
+
+          keymap.set(
+            "n",
+            "<leader>D",
+            "<cmd>Telescope diagnostics bufnr=0<CR>",
+            vim.tbl_extend("force", opts, { desc = "Buffer Diagnostics" })
+          )
+
+          keymap.set(
+            "n",
+            "<leader>d",
+            function()
+              vim.diagnostic.open_float(nil, { border = border })
+            end,
+            vim.tbl_extend("force", opts, { desc = "Line Diagnostics" })
+          )
+
+          keymap.set(
+            "n",
+            "[d",
+            vim.diagnostic.goto_prev,
+            vim.tbl_extend("force", opts, { desc = "Prev Diagnostic" })
+          )
+
+          keymap.set(
+            "n",
+            "]d",
+            vim.diagnostic.goto_next,
+            vim.tbl_extend("force", opts, { desc = "Next Diagnostic" })
+          )
+
+          keymap.set(
+            "n",
+            "K",
+            function()
+              vim.lsp.buf.hover({
+                border = border,
+                max_width = 100,
+                max_height = 25,
+              })
+            end,
+            vim.tbl_extend("force", opts, { desc = "Hover" })
+          )
+
+          keymap.set(
+            "n",
+            "<C-k>",
+            function()
+              vim.lsp.buf.signature_help({
+                border = border,
+                max_width = 100,
+                max_height = 25,
+              })
+            end,
+            vim.tbl_extend("force", opts, { desc = "Signature Help" })
+          )
+
+          keymap.set(
+            "n",
+            "<leader>rs",
+            "<cmd>LspRestart<CR>",
+            vim.tbl_extend("force", opts, { desc = "Restart LSP" })
+          )
 
           if client and client.name == "clangd" then
-            keymap.set("n", "<leader>ch", "<cmd>ClangdSwitchSourceHeader<cr>",
-              { buffer = ev.buf, silent = true, desc = "Switch Source/Header (C/C++)" })
+            keymap.set(
+              "n",
+              "<leader>ch",
+              "<cmd>ClangdSwitchSourceHeader<CR>",
+              { buffer = ev.buf, silent = true, desc = "Switch Source/Header (C/C++)" }
+            )
           end
 
           if vim.lsp.inlay_hint then
@@ -124,7 +244,9 @@ vim.lsp.config("lua_ls", {
             pcall(vim.lsp.codelens.refresh)
             vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "InsertLeave" }, {
               buffer = ev.buf,
-              callback = function() pcall(vim.lsp.codelens.refresh) end,
+              callback = function()
+                pcall(vim.lsp.codelens.refresh)
+              end,
             })
           end
         end,

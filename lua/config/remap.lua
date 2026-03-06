@@ -22,3 +22,5 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 vim.g.python3_host_prog = vim.fn.expand("~/.venvs/nvim/bin/python")
+
+vim.o.winborder = "rounded"

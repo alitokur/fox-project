@@ -45,3 +45,4 @@ opt.cursorline = false -- highlight the current line
 --search
 -- remove highlight after searching
 opt.hlsearch = false
+
