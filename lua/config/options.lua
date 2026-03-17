@@ -46,3 +46,11 @@ opt.cursorline = false -- highlight the current line
 -- remove highlight after searching
 opt.hlsearch = false
 
+-- remove the ~ at the end of buffer
+vim.opt.fillchars:append { eob = " " }
+
+vim.opt.guicursor = {
+  "n-v-c:block-blinkwait200-blinkon200-blinkoff200",
+  "i:ver25-blinkwait200-blinkon200-blinkoff200",
+}
+
