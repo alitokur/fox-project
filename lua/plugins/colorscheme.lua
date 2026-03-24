@@ -12,22 +12,22 @@ return {
 
       vim.cmd.colorscheme("dracula")
 
-      -- darker background
-      local bg = "#181818"
-
-      local hl = vim.api.nvim_set_hl
-
-      hl(0,"Normal",{bg=bg})
-      hl(0,"NormalNC",{bg=bg})
-      hl(0,"SignColumn",{bg=bg})
-      hl(0,"EndOfBuffer",{bg=bg})
-      hl(0,"NormalFloat",{bg=bg})
-      hl(0,"FloatBorder",{bg=bg})
-
-      hl(0,"CursorLine",{bg="#2a2c3a"})
-      hl(0,"ColorColumn",{bg="#2b2d3a"})
-      hl(0,"LineNr",{fg="#6272a4"})
-      hl(0,"CursorLineNr",{fg="#f8f8f2",bold=true})
+      -- -- darker background
+      -- local bg = "#181818"
+      --
+      -- local hl = vim.api.nvim_set_hl
+      --
+      -- hl(0,"Normal",{bg=bg})
+      -- hl(0,"NormalNC",{bg=bg})
+      -- hl(0,"SignColumn",{bg=bg})
+      -- hl(0,"EndOfBuffer",{bg=bg})
+      -- hl(0,"NormalFloat",{bg=bg})
+      -- hl(0,"FloatBorder",{bg=bg})
+      --
+      -- hl(0,"CursorLine",{bg="#2a2c3a"})
+      -- hl(0,"ColorColumn",{bg="#2b2d3a"})
+      -- hl(0,"LineNr",{fg="#6272a4"})
+      -- hl(0,"CursorLineNr",{fg="#f8f8f2",bold=true})
 
       -- better C++ syntax visibility
       hl(0,"@type",{fg="#8be9fd"})
