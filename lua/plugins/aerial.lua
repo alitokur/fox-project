@@ -2,16 +2,17 @@ return{
   "stevearc/aerial.nvim",
   opts = function()
 
-
     ---@type table<string, string[]>|false
     local filter_kind = false
 
     local opts = {
-      attach_mode = "global",
+      attach_mode = "window",
       backends = { "lsp", "treesitter", "markdown", "man" },
+      close_automatic_events = { "unsupported" },
       show_guides = true,
       layout = {
-        resize_to_content = false,
+        default_direction = "left",
+        resize_to_content = true,
         win_opts = {
           winhl = "Normal:NormalFloat,FloatBorder:NormalFloat,SignColumn:SignColumnSB",
           signcolumn = "yes",
@@ -33,3 +34,5 @@ return{
     { "<leader>cs", "<cmd>AerialToggle<cr>", desc = "Aerial (Symbols)" },
   },
 }
+
+
