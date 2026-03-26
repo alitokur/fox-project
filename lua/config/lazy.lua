@@ -25,7 +25,7 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
     spec = {
         -- import your plugins
-        { import = "plugins", concurrency = 1 },
+        { import = "plugins", concurrency = 5 },
         { import = "plugins.lsp"},
     },
     concurrency = 1, -- how many plugins to install at the same time (default is 4)
