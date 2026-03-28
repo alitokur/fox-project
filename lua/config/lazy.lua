@@ -28,7 +28,7 @@ require("lazy").setup({
         { import = "plugins", concurrency = 5 },
         { import = "plugins.lsp"},
     },
-    concurrency = 1, -- how many plugins to install at the same time (default is 4)
+    concurrency = 5, -- how many plugins to install at the same time (default is 4)
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
     install = { colorscheme = { "habamax" } },
