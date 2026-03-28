@@ -16,7 +16,12 @@
 <h6> Inspired by our ancient leader <a href="https://github.com/ThePrimeagen">ThePrimeagen</a> , you can find the original
 configs <a href="https://github.com/ThePrimeagen/init.lua">here</a>. </h6>
 
-<img src="img/Animation.gif" alt="NeocppGIFDemo">
+
+<p align="center">
+  <img src="screenshots/dash.png" width="45%">
+</p>
+
+
 
 </div>
 
