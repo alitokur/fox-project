@@ -9,8 +9,11 @@ return {
         transparent_bg = false,
 
         colors = {
-          bg = "#161616",   -- 
-          menu = "#161616", -- 
+          bg = "#161616",   
+          menu = "#161616",
+          cyan = "#ff5555", -- type names
+          bright_cyan = "#FFB399", -- structures and class names
+          orange = "#FF937E" -- var names
         },
 
         overrides = function(colors)

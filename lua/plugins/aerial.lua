@@ -13,6 +13,8 @@ return{
       layout = {
         default_direction = "left",
         resize_to_content = true,
+        min_width = 35,
+        max_width = 50,
         win_opts = {
           winhl = "Normal:NormalFloat,FloatBorder:NormalFloat,SignColumn:SignColumnSB",
           signcolumn = "yes",
