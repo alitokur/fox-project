@@ -11,7 +11,8 @@ return{
       close_automatic_events = { "unsupported" },
       show_guides = true,
       layout = {
-        default_direction = "left",
+        placement = "edge",
+        default_direction = "prefer_left",
         resize_to_content = true,
         min_width = 35,
         max_width = 50,

@@ -12,15 +12,34 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- paste with buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- splits and tabbed files
-vim.keymap.set("n", "<A-h>", "<C-w>s")
-vim.keymap.set("n", "<A-v>", "<C-w>v")
--- movement
-vim.keymap.set("n", "<C-h>", "<c-w>h")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
+-- split behavior
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
+-- open splits and move into them
+vim.keymap.set("n", "<leader>_", "<C-w>s<C-w>j", { desc = "Horizontal split" })
+vim.keymap.set("n", "<leader>-", "<C-w>v<C-w>l", { desc = "Vertical split" })
+
+-- move between splits
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left split" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to below split" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to upper split" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right split" })
+
+-- resize splits
+vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", { desc = "Resize split up" })
+vim.keymap.set("n", "<C-Down>", ":resize +2<CR>", { desc = "Resize split down" })
+vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "Resize split left" })
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Resize split right" })
+
+-- useful extras
+vim.keymap.set("n", "<leader>=", "<C-w>=", { desc = "Equalize splits" })
+vim.keymap.set("n", "<leader>x", "<C-w>c", { desc = "Close current split" })
+vim.keymap.set("n", "<leader>o", "<C-w>o", { desc = "Close other splits" })
+
+-- behavior
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 vim.g.python3_host_prog = vim.fn.expand("~/.venvs/nvim/bin/python")
 
 vim.o.winborder = "rounded"

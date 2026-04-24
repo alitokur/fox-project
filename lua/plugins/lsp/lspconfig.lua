@@ -209,7 +209,7 @@ return {
 
           keymap.set(
             "n",
-            "<C-k>",
+            "<leader>-k",
             function()
               vim.lsp.buf.signature_help({
                 border = border,
