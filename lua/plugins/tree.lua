@@ -11,7 +11,21 @@ return {
     local HEIGHT_RATIO = 0.8  -- You can change this
     local WIDTH_RATIO = 0.5
 
+    -- close the tree with <Esc>, keep all default mappings
+    local function on_attach(bufnr)
+      local api = require("nvim-tree.api")
+      api.config.mappings.default_on_attach(bufnr)
+      vim.keymap.set("n", "<Esc>", api.tree.close, {
+        buffer = bufnr,
+        desc = "nvim-tree: Close",
+        noremap = true,
+        silent = true,
+        nowait = true,
+      })
+    end
+
     nvimtree.setup({
+      on_attach = on_attach,
       view = {
           float = {
             enable = true,

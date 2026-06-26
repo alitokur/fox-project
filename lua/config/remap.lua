@@ -1,6 +1,13 @@
 vim.g.mapleader = " "
 --command mode with ENTER
 vim.keymap.set("n", "<CR>", ":")
+-- ...but keep <CR> working as Enter in list/special buffers (jump to item etc.)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "qf", "help", "lspinfo", "checkhealth", "man", "git" },
+  callback = function(ev)
+    vim.keymap.set("n", "<CR>", "<CR>", { buffer = ev.buf, nowait = true })
+  end,
+})
 --move with J-K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -34,7 +41,7 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Resize spl
 
 -- useful extras
 vim.keymap.set("n", "<leader>=", "<C-w>=", { desc = "Equalize splits" })
-vim.keymap.set("n", "<leader>x", "<C-w>c", { desc = "Close current split" })
+vim.keymap.set("n", "<leader>q", "<C-w>c", { desc = "Close current split" })
 vim.keymap.set("n", "<leader>o", "<C-w>o", { desc = "Close other splits" })
 
 -- behavior

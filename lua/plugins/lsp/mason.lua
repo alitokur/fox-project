@@ -4,7 +4,6 @@ return {
     cmd = "Mason",
     build = ":MasonUpdate",
     opts = {
-    ensure_installed = { "codelldb" },
       ui = {
         icons = {
           package_installed = "✓",
@@ -29,6 +28,7 @@ return {
     dependencies = { "mason-org/mason.nvim" },
     opts = {
       ensure_installed = {
+        "codelldb", -- C/C++/Rust debugger (DAP)
         -- formatter/linter eklemek istersen buraya
         -- "stylua", "shfmt", "clang-format"
       },

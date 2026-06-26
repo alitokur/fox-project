@@ -65,8 +65,7 @@ return {
             "selene.yml",
             ".git"
           )(fname)
-            or util.find_git_ancestor(fname)
-            or util.path.dirname(fname)
+            or vim.fs.dirname(fname)
         end,
         settings = {
           Lua = {
@@ -115,40 +114,7 @@ return {
 
           local opts = { buffer = ev.buf, silent = true }
 
-          keymap.set(
-            "n",
-            "gR",
-            "<cmd>Telescope lsp_references<CR>",
-            vim.tbl_extend("force", opts, { desc = "References" })
-          )
-
-          keymap.set(
-            "n",
-            "gD",
-            vim.lsp.buf.declaration,
-            vim.tbl_extend("force", opts, { desc = "Declaration" })
-          )
-
-          keymap.set(
-            "n",
-            "gd",
-            "<cmd>Telescope lsp_definitions<CR>",
-            vim.tbl_extend("force", opts, { desc = "Definition" })
-          )
-
-          keymap.set(
-            "n",
-            "gi",
-            "<cmd>Telescope lsp_implementations<CR>",
-            vim.tbl_extend("force", opts, { desc = "Implementation" })
-          )
-
-          keymap.set(
-            "n",
-            "gt",
-            "<cmd>Telescope lsp_type_definitions<CR>",
-            vim.tbl_extend("force", opts, { desc = "Type Definition" })
-          )
+          -- goto navigation (gd/gD/gr/gI/gy) is provided by snacks.picker
 
           keymap.set(
             { "n", "v" },
@@ -164,12 +130,7 @@ return {
             vim.tbl_extend("force", opts, { desc = "Rename" })
           )
 
-          keymap.set(
-            "n",
-            "<leader>D",
-            "<cmd>Telescope diagnostics bufnr=0<CR>",
-            vim.tbl_extend("force", opts, { desc = "Buffer Diagnostics" })
-          )
+          -- buffer diagnostics list is provided by snacks (<leader>sD)
 
           keymap.set(
             "n",
@@ -183,14 +144,18 @@ return {
           keymap.set(
             "n",
             "[d",
-            vim.diagnostic.goto_prev,
+            function()
+              vim.diagnostic.jump({ count = -1, float = true })
+            end,
             vim.tbl_extend("force", opts, { desc = "Prev Diagnostic" })
           )
 
           keymap.set(
             "n",
             "]d",
-            vim.diagnostic.goto_next,
+            function()
+              vim.diagnostic.jump({ count = 1, float = true })
+            end,
             vim.tbl_extend("force", opts, { desc = "Next Diagnostic" })
           )
 

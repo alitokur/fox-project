@@ -13,7 +13,12 @@ return {
       debug = false,
       opacity = nil,
       resizing_mappings = false,
-      post_open_hook = nil,
+      post_open_hook = function(bufnr, winid)
+        -- close the preview window with <Esc>, only inside the preview buffer
+        vim.keymap.set("n", "<Esc>", function()
+          require("goto-preview").close_all_win()
+        end, { buffer = bufnr, silent = true, nowait = true, desc = "Close preview" })
+      end,
       focus_on_open = true,
       dismiss_on_move = false,
       force_close = true,
@@ -29,11 +34,6 @@ return {
 
     -- preview kapatma
     vim.keymap.set("n", "gP", gp.close_all_win, { desc = "Close Preview Windows" })
-
-    -- ESC ile preview kapatma
-    vim.keymap.set("n", "<Esc>", function()
-      gp.close_all_win()
-    end, { silent = true })
 
     -- daha belirgin border rengi
     vim.api.nvim_set_hl(0, "FloatBorder", {
