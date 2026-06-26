@@ -29,11 +29,9 @@ return {
         underline = true,
         update_in_insert = false,
         severity_sort = true,
-        virtual_text = {
-          spacing = 4,
-          source = "if_many",
-          prefix = "●",
-        },
+        -- diagnostic rendering is handled by tiny-inline-diagnostic.nvim
+        virtual_text = false,
+        virtual_lines = false,
         float = {
           border = border,
           source = "if_many",

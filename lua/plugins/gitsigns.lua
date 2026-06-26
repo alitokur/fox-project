@@ -17,6 +17,16 @@ return {
       topdelete = { text = "" },
       changedelete = { text = "▎" },
     },
+    -- inline "who changed this line" blame, OFF by default so it doesn't
+    -- fight with diagnostics; toggle it with <leader>ght
+    current_line_blame = false,
+    current_line_blame_opts = {
+      virt_text = true,
+      virt_text_pos = "eol",
+      delay = 1000,
+      ignore_whitespace = false,
+    },
+    current_line_blame_formatter = "  <author>, <author_time:%R> • <summary>",
     on_attach = function(buffer)
       local gs = package.loaded.gitsigns
 
@@ -48,6 +58,8 @@ return {
       map("n", "<leader>ghR", gs.reset_buffer, "Reset Buffer")
       map("n", "<leader>ghp", gs.preview_hunk_inline, "Preview Hunk Inline")
       map("n", "<leader>ghb", function() gs.blame_line({ full = true }) end, "Blame Line")
+      map("n", "gB", function() gs.blame_line({ full = true }) end, "Blame Line (popup)")
+      map("n", "<leader>ght", gs.toggle_current_line_blame, "Toggle Inline Blame")
       map("n", "<leader>ghB", function() gs.blame() end, "Blame Buffer")
       map("n", "<leader>ghd", gs.diffthis, "Diff This")
       map("n", "<leader>ghD", function() gs.diffthis("~") end, "Diff This ~")

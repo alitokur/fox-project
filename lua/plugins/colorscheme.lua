@@ -18,7 +18,7 @@ return {
 
         overrides = function(colors)
           return {
-              CursorLine = { bg = "#262626" },
+              CursorLine = { bg = colors.bg },
             -- Core UI
             Normal = { bg = colors.bg },
             NormalNC = { bg = colors.bg },
