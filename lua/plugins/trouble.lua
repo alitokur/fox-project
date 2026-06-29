@@ -30,10 +30,10 @@ return {
     })
   end,
   opts = {
-  -- open the Trouble window as a right-side vertical split
+  -- open Trouble (diagnostics/qf/loclist/lsp) as a bottom split
   win = {
-    position = "right",
-    size = 0.35,
+    position = "bottom",
+    size = 0.3,
   },
   modes = {
     -- document symbols: persistent outline on the LEFT, doesn't steal focus
