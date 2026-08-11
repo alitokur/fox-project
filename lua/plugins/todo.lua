@@ -16,6 +16,10 @@ return {
       todo_comments.jump_prev()
     end, { desc = "Previous todo comment" })
 
+    -- list todos in Trouble (opens in the bottom panel like other Trouble modes)
+    keymap.set("n", "<leader>xt", "<cmd>TodoTrouble<cr>", { desc = "Todos (Trouble)" })
+    keymap.set("n", "<leader>xT", "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<cr>", { desc = "Todo/Fix/Fixme (Trouble)" })
+
     todo_comments.setup()
   end,
 }
